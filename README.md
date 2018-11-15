@@ -1,7 +1,5 @@
 # PyTorch Scholarship Challenge 2018/2019 Notes
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
-
 A collection of notes on PyTorch Scholarship Challenge 2018/2019.
 
 Contributions are always welcome!
@@ -13,6 +11,30 @@ Contributions are always welcome!
 * [2018-11-14](https://drive.google.com/open?id=1SMxlFQzBi4yukHu-mwhXTz79MApUiiHS)
 
 ## Lesson 2
+
+### Classification Problems
+  The problem of identifying to which of a set of categories (sub-populations) a new observation belongs.
+### Linear Boundaries
+### Perceptrons
+### Error Functions
+### Softmax
+### One-Hot Encoding
+### Maximum Likelihood
+### Cross-Entropy
+### Multi-Class Cross Entropy
+### Logistic Regression
+### Gradient Descent
+### Feedforward
+### Backpropagation
+### Overfitting
+### Underfitting
+### Early Stopping
+### Regularization
+### Dropout
+### Local Minima
+### Random Restart
+### Momentum
+
 ## Lesson 3
 ## Lesson 4
 ## Lesson 5
