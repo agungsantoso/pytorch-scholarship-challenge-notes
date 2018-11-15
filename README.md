@@ -6,12 +6,17 @@ A collection of notes on PyTorch Scholarship Challenge 2018/2019.
 
 Contributions are always welcome!
 
-# AMA
-# Lesson 2
-# Lesson 3
-# Lesson 4
-# Lesson 5
-# Lesson 6
-# Lesson 7
-# Lesson 8
-# Lesson 9
+## AMA
+
+* [2018-11-09](https://drive.google.com/open?id=1Oa_NfQkqnrqcn29p7v5Hv9ttiHOnvXsc)
+* [2018-11-13](https://drive.google.com/open?id=1SMxlFQzBi4yukHu-mwhXTz79MApUiiHS)
+* [2018-11-14](https://drive.google.com/open?id=1SMxlFQzBi4yukHu-mwhXTz79MApUiiHS)
+
+## Lesson 2
+## Lesson 3
+## Lesson 4
+## Lesson 5
+## Lesson 6
+## Lesson 7
+## Lesson 8
+## Lesson 9
