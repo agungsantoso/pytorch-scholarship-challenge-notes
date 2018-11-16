@@ -1,8 +1,59 @@
 # PyTorch Scholarship Challenge 2018/2019 Notes
 
+
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+
+
 A collection of notes on PyTorch Scholarship Challenge 2018/2019.
 
 Contributions are always welcome!
+
+<!-- toc -->
+
+- [AMA](#ama)
+- [Lesson 2](#lesson-2)
+  * [Classification Problems](#classification-problems)
+  * [Decision Boundary](#decision-boundary)
+  * [Perceptrons](#perceptrons)
+  * [Why "Neural Networks"?](#why-neural-networks)
+  * [Perceptrons as Logical Operators](#perceptrons-as-logical-operators)
+  * [Perceptron Trick](#perceptron-trick)
+  * [Perceptron Algorithm](#perceptron-algorithm)
+  * [Non-Linear Regions](#non-linear-regions)
+  * [Error Functions](#error-functions)
+  * [Log-loss Error Function](#log-loss-error-function)
+  * [Discrete vs Continous](#discrete-vs-continous)
+  * [Softmax](#softmax)
+  * [One-Hot Encoding](#one-hot-encoding)
+  * [Maximum Likelihood](#maximum-likelihood)
+  * [Cross-Entropy](#cross-entropy)
+  * [Multi-Class Cross Entropy](#multi-class-cross-entropy)
+  * [Logistic Regression](#logistic-regression)
+  * [Gradient Descent](#gradient-descent)
+  * [Feedforward](#feedforward)
+  * [Backpropagation](#backpropagation)
+  * [Overfitting & Underfitting](#overfitting--underfitting)
+    + [Overfitting](#overfitting)
+    + [Underfitting](#underfitting)
+  * [Early Stopping](#early-stopping)
+  * [Regularization](#regularization)
+  * [Dropout](#dropout)
+  * [Local Minima](#local-minima)
+  * [Random Restart](#random-restart)
+  * [Momentum](#momentum)
+- [Lesson 3](#lesson-3)
+- [Lesson 4](#lesson-4)
+- [Lesson 5](#lesson-5)
+- [Lesson 6](#lesson-6)
+- [Lesson 7](#lesson-7)
+- [Lesson 8](#lesson-8)
+- [Lesson 9](#lesson-9)
+- [Credits](#credits)
+
+<!-- tocstop -->
+
+;
 
 ## AMA
 
@@ -247,3 +298,6 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 
 ## Lesson 9
 
+## Credits
+1. Images taken from lectures videos at [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
+2. [Machine Learning Glossary](https://developers.google.com/machine-learning/glossary/)
