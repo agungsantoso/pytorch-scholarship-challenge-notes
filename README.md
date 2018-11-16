@@ -75,12 +75,12 @@ Contributions are always welcome!
 
   * Linear Boundaries
     <p align="center">
-      <img src="./images/lesson-2/linear-boundaries.PNG" width="75%">
+      <img src="./images/lesson-2/linear-boundaries.PNG" width="50%">
     </p>
 
   * Higher Dimensions
     <p align="center">
-      <img src="./images/lesson-2/higher-dimensions.PNG" width="75%">
+      <img src="./images/lesson-2/higher-dimensions.PNG" width="50%">
     </p>
 
 ### Perceptrons
@@ -89,7 +89,7 @@ Contributions are always welcome!
   In the following illustration, the perceptron takes n inputs, each of which is itself modified by a weight before entering the perceptron:
 
   <p align="center">
-    <img src="./images/lesson-2/perceptrons.PNG" width="75%">
+    <img src="./images/lesson-2/perceptrons.PNG" width="50%">
   </p>
 
   A perceptron that takes in n inputs, each multiplied by separate
@@ -100,7 +100,7 @@ Contributions are always welcome!
 ### Why "Neural Networks"?
 
   <p align="center">
-    <img src="./images/lesson-2/why-neural-network.PNG" width="75%">
+    <img src="./images/lesson-2/why-neural-network.PNG" width="50%">
   </p>
 
 ### Perceptrons as Logical Operators
@@ -108,17 +108,17 @@ Contributions are always welcome!
 * AND Perceptron
 
   <p align="center">
-    <img src="./images/lesson-2/and-quiz.png" width="75%">
+    <img src="./images/lesson-2/and-quiz.png" width="50%">
   </p>
 
 * OR Perceptron
 
   <p align="center">
-    <img src="./images/lesson-2/or-quiz.png" width="75%">
+    <img src="./images/lesson-2/or-quiz.png" width="50%">
   </p>
 
     <p align="center">
-    <img src="./images/lesson-2/and-to-or.png" width="75%">
+    <img src="./images/lesson-2/and-to-or.png" width="50%">
   </p>
 
 * NOT Perceptron
@@ -127,32 +127,32 @@ Contributions are always welcome!
 * XOR Perceptron
 
   <p align="center">
-    <img src="./images/lesson-2/xor.png" width="75%">
+    <img src="./images/lesson-2/xor.png" width="50%">
   </p>
 
 ### Perceptron Trick
 <p align="center">
-  <img src="./images/lesson-2/perceptron-trick.PNG" width="75%">
+  <img src="./images/lesson-2/perceptron-trick.PNG" width="50%">
 </p>
 
 ### Perceptron Algorithm
 <p align="center">
-  <img src="./images/lesson-2/perceptron-algorithm.PNG" width="75%">
+  <img src="./images/lesson-2/perceptron-algorithm.PNG" width="50%">
 </p>
 
 ### Non-Linear Regions
 <p align="center">
-  <img src="./images/lesson-2/non-linear-regions.PNG" width="75%">
+  <img src="./images/lesson-2/non-linear-regions.PNG" width="50%">
 </p>
 
 ### Error Functions
 <p align="center">
-  <img src="./images/lesson-2/error-functions.PNG" width="75%">
+  <img src="./images/lesson-2/error-functions.PNG" width="50%">
 </p>
 
 ### Log-loss Error Function
 <p align="center">
-  <img src="./images/lesson-2/log-loss-error-function.PNG" width="75%">
+  <img src="./images/lesson-2/log-loss-error-function.PNG" width="50%">
 </p>
 
 ### Discrete vs Continous
@@ -164,7 +164,7 @@ Contributions are always welcome!
 A function that provides probabilities for each possible class in a multi-class classification model. The probabilities add up to exactly 1.0. For example, softmax might determine that the probability of a particular image being a duck at 0.67, a beaver at 0.33, and a walrus at 0. (Also called full softmax.)
 
 <p align="center">
-  <img src="./images/lesson-2/softmax.PNG" width="75%">
+  <img src="./images/lesson-2/softmax.PNG" width="50%">
 </p>
 
 ### One-Hot Encoding
@@ -177,13 +177,13 @@ A sparse vector in which:
 One-hot encoding is commonly used to represent strings or identifiers that have a finite set of possible values. For example, suppose a given botany data set chronicles 15,000 different species, each denoted with a unique string identifier. As part of feature engineering, you'll probably encode those string identifiers as one-hot vectors in which the vector has a size of 15,000.
 
 <p align="center">
-  <img src="./images/lesson-2/one-hot-encoding.PNG" width="75%">
+  <img src="./images/lesson-2/one-hot-encoding.PNG" width="50%">
 </p>
 
 
 ### Maximum Likelihood
 <p align="center">
-  <img src="./images/lesson-2/maximum-likelihood.PNG" width="75%">
+  <img src="./images/lesson-2/maximum-likelihood.PNG" width="50%">
 </p>
 
 ### Cross-Entropy
@@ -191,35 +191,35 @@ One-hot encoding is commonly used to represent strings or identifiers that have 
 A generalization of Log Loss to multi-class classification problems. Cross-entropy quantifies the difference between two probability distributions.
 
 <p align="center">
-  <img src="./images/lesson-2/cross-entropy.PNG" width="75%">
+  <img src="./images/lesson-2/cross-entropy.PNG" width="50%">
 </p>
 
 ### Multi-Class Cross Entropy
 <p align="center">
-  <img src="./images/lesson-2/multi-class-cross-entropy.PNG" width="75%">
+  <img src="./images/lesson-2/multi-class-cross-entropy.PNG" width="50%">
 </p>
 
 ### Logistic Regression
 A model that generates a probability for each possible discrete label value in classification problems by applying a sigmoid function to a linear prediction. Although logistic regression is often used in binary classification problems, it can also be used in multi-class classification problems (where it becomes called multi-class logistic regression or multinomial regression).
 <p align="center">
-  <img src="./images/lesson-2/logistic-regresssion.PNG" width="75%">
+  <img src="./images/lesson-2/logistic-regresssion.PNG" width="50%">
 </p>
 
 ### Gradient Descent
 A technique to minimize loss by computing the gradients of loss with respect to the model's parameters, conditioned on training data. Informally, gradient descent iteratively adjusts parameters, gradually finding the best combination of weights and bias to minimize loss.
 <p align="center">
-  <img src="./images/lesson-2/gradient-descent.PNG" width="75%">
+  <img src="./images/lesson-2/gradient-descent.PNG" width="50%">
 </p>
 
 ### Feedforward
 <p align="center">
-  <img src="./images/lesson-2/feedforward.PNG" width="75%">
+  <img src="./images/lesson-2/feedforward.PNG" width="50%">
 </p>
 
 ### Backpropagation
 The primary algorithm for performing gradient descent on neural networks. First, the output values of each node are calculated (and cached) in a forward pass. Then, the partial derivative of the error with respect to each parameter is calculated in a backward pass through the graph.
 <p align="center">
-  <img src="./images/lesson-2/backpropagration.PNG" width="75%">
+  <img src="./images/lesson-2/backpropagration.PNG" width="50%">
 </p>
 
 ### Overfitting & Underfitting
@@ -235,13 +235,13 @@ Producing a model with poor predictive ability because the model hasn't captured
 * Providing too few hidden layers in a deep neural network.
 
 <p align="center">
-  <img src="./images/lesson-2/overfitting-and-underfitting.PNG" width="75%">
+  <img src="./images/lesson-2/overfitting-and-underfitting.PNG" width="50%">
 </p>
 
 ### Early Stopping
 A method for regularization that involves ending model training before training loss finishes decreasing. In early stopping, you end model training when the loss on a validation data set starts to increase, that is, when generalization performance worsens.
 <p align="center">
-  <img src="./images/lesson-2/early-stopping.PNG" width="75%">
+  <img src="./images/lesson-2/early-stopping.PNG" width="50%">
 </p>
 
 ### Regularization
@@ -253,29 +253,29 @@ The penalty on a model's complexity. Regularization helps prevent overfitting. D
 * early stopping (this is not a formal regularization method, but can effectively limit overfitting)
 
 <p align="center">
-  <img src="./images/lesson-2/regularization.PNG" width="75%">
+  <img src="./images/lesson-2/regularization.PNG" width="50%">
 </p>
 
 ### Dropout
 A form of regularization useful in training neural networks. Dropout regularization works by removing a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization. This is analogous to training the network to emulate an exponentially large ensemble of smaller networks.
 <p align="center">
-  <img src="./images/lesson-2/dropout.PNG" width="75%">
+  <img src="./images/lesson-2/dropout.PNG" width="50%">
 </p>
 
 ### Local Minima
 <p align="center">
-  <img src="./images/lesson-2/local-minima.PNG" width="75%">
+  <img src="./images/lesson-2/local-minima.PNG" width="50%">
 </p>
 
 ### Random Restart
 <p align="center">
-  <img src="./images/lesson-2/random-restart.PNG" width="75%">
+  <img src="./images/lesson-2/random-restart.PNG" width="50%">
 </p>
 
 ### Momentum
 A sophisticated gradient descent algorithm in which a learning step depends not only on the derivative in the current step, but also on the derivatives of the step(s) that immediately preceded it. Momentum involves computing an exponentially weighted moving average of the gradients over time, analogous to momentum in physics. Momentum sometimes prevents learning from getting stuck in local minima.
 <p align="center">
-  <img src="./images/lesson-2/momentum.PNG" width="75%">
+  <img src="./images/lesson-2/momentum.PNG" width="50%">
 </p>
 
 ## Lesson 3
