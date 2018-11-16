@@ -53,8 +53,6 @@ Contributions are always welcome!
 
 <!-- tocstop -->
 
-;
-
 ## AMA
 
 * [2018-11-09](https://drive.google.com/open?id=1Oa_NfQkqnrqcn29p7v5Hv9ttiHOnvXsc)
