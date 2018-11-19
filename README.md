@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 <p align="center">
-  <img src="./images/pytorch_scholarship.png" width="50%">
+  <img src="./images/pytorch_scholarship.png" width="25%">
 </p>
 
 A collection of notes on PyTorch Scholarship Challenge 2018/2019.
@@ -48,7 +48,7 @@ Contributions are always welcome!
   * [Quizes](#quizes)
   * [Notebooks](#notebooks)
 - [Lesson 3](#lesson-3)
-  * [Lectures](#lectures-1)
+  * [Interview](#interview)
     + [Origins of PyTorch](#origins-of-pytorch)
     + [Debugging and Designing PyTorch](#debugging-and-designing-pytorch)
     + [From Research to Production](#from-research-to-production)
@@ -58,8 +58,6 @@ Contributions are always welcome!
     + [PyTorch and the Facebook Product](#pytorch-and-the-facebook-product)
     + [The Future of PyTorch](#the-future-of-pytorch)
     + [Learning More in AI](#learning-more-in-ai)
-  * [Quizes](#quizes-1)
-  * [Notebooks](#notebooks-1)
 - [Lesson 4](#lesson-4)
 - [Lesson 5](#lesson-5)
 - [Lesson 6](#lesson-6)
