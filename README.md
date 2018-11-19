@@ -295,8 +295,11 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 </p>
 
 ### Quizes
+* [Centurion's Note](https://files.slack.com/files-pri/TDBKE3X9D-FE3CP0FNW/download/udacity-pytorch-lesson2-notes.pdf)
 
 ### Notebooks
+* [Gradient Descent](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-neural-networks/gradient-descent/GradientDescent.ipynb)
+* [Analyzing Student Data](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-neural-networks/student-admissions/StudentAdmissions.ipynb)
 
 ## Lesson 3
 ### Interview
@@ -357,6 +360,38 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 
 ## Lesson 4
 
+### Lectures
+
+#### Single layer neural networks
+* tensor
+The primary data structure in TensorFlow programs. Tensors are N-dimensional (where N could be very large) data structures, most commonly scalars, vectors, or matrices. The elements of a Tensor can hold integer, floating-point, or string values.
+<p align="center">
+  <img src="./images/lesson-4/tensor.PNG" width="50%">
+</p>
+* [torch.sum()](https://pytorch.org/docs/stable/torch.html#torch.sum)
+* [torch.mm()](https://pytorch.org/docs/stable/torch.html#torch.mm)
+* [torch.matmul()](https://pytorch.org/docs/stable/torch.html#torch.matmul)
+* [tensor.reshape()](https://pytorch.org/docs/stable/tensors.html#torch.Tensor.reshape)
+* [tensor.resize()](https://pytorch.org/docs/stable/tensors.html#torch.Tensor.resize_)
+* [tensor.view()](https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view)
+
+#### Networks Using Matrix Multiplication
+* hyperparameter
+The "knobs" that you tweak during successive runs of training a model. For example, learning rate is a hyperparameter.
+
+#### Neural Networks in PyTorch
+#### Network Architectures in PyTorch
+#### Classifying Fashion-MNIST
+#### Inference and Validation
+#### Saving and Loading Models
+#### Loading Image Data
+#### Transfer Learning
+#### Tips, Tricks, and Other Notes
+
+### Quizes
+
+### Notebooks
+* [Tensors in PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%201%20-%20Tensors%20in%20PyTorch%20(Exercises).ipynb)
 
 ## Lesson 5
 
@@ -371,6 +406,8 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 
 
 ## Lesson 9
+
+## Challenge Project
 
 ## Credits
 1. Images taken from lectures videos at [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
