@@ -382,6 +382,7 @@ The primary data structure in TensorFlow programs. Tensors are N-dimensional (wh
 <p align="center">
   <img src="./images/lesson-4/tensor.PNG" width="50%">
 </p>
+
 * [torch.sum()](https://pytorch.org/docs/stable/torch.html#torch.sum)
 * [torch.mm()](https://pytorch.org/docs/stable/torch.html#torch.mm)
 * [torch.matmul()](https://pytorch.org/docs/stable/torch.html#torch.matmul)
