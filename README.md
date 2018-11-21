@@ -378,6 +378,7 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 
 #### Single layer neural networks
 * tensor
+
 The primary data structure in TensorFlow programs. Tensors are N-dimensional (where N could be very large) data structures, most commonly scalars, vectors, or matrices. The elements of a Tensor can hold integer, floating-point, or string values.
 <p align="center">
   <img src="./images/lesson-4/tensor.PNG" width="50%">
@@ -392,6 +393,7 @@ The primary data structure in TensorFlow programs. Tensors are N-dimensional (wh
 
 #### Networks Using Matrix Multiplication
 * hyperparameter
+
 The "knobs" that you tweak during successive runs of training a model. For example, learning rate is a hyperparameter.
 
 #### Neural Networks in PyTorch
