@@ -396,50 +396,63 @@ The "knobs" that you tweak during successive runs of training a model. For examp
 
 #### Neural Networks in PyTorch
 * neural network
+
 A model that, taking inspiration from the brain, is composed of layers (at least one of which is hidden) consisting of simple connected units or neurons followed by nonlinearities.
 
 * MNIST
+
 A public-domain data set compiled by LeCun, Cortes, and Burges containing 60,000 images, each image showing how a human manually wrote a particular digit from 0–9. Each image is stored as a 28x28 array of integers, where each integer is a grayscale value between 0 and 255, inclusive.
 <p align="center">
   <img src="https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/assets/mnist.png?raw=1" width="50%">
 </p>
 
 * activation function
+
 A function (for example, ReLU or sigmoid) that takes in the weighted sum of all of the inputs from the previous layer and then generates and passes an output value (typically nonlinear) to the next layer.
  
  * [nn.Sequential](https://pytorch.org/docs/master/nn.html#torch.nn.Sequential)
 
 #### Network Architectures in PyTorch
 * backpropagation
+
 The primary algorithm for performing gradient descent on neural networks. First, the output values of each node are calculated (and cached) in a forward pass. Then, the partial derivative of the error with respect to each parameter is calculated in a backward pass through the graph.
 
 * batch
+
 The set of examples used in one iteration (that is, one gradient update) of model training.
 
 * batch size
+
 The number of examples in a batch. For example, the batch size of SGD is 1, while the batch size of a mini-batch is usually between 10 and 1000. Batch size is usually fixed during training and inference;
 
 * cross-entropy
+
 A generalization of Log Loss to multi-class classification problems. Cross-entropy quantifies the difference between two probability distributions
 
 * epoch
+
 A full training pass over the entire data set such that each example has been seen once. Thus, an epoch represents N/batch size training iterations, where N is the total number of examples.
 
 * hidden layer
+
 A synthetic layer in a neural network between the input layer (that is, the features) and the output layer (the prediction). Hidden layers typically contain an activation function (such as ReLU) for training. A deep neural network contains more than one hidden layer.
 
 * logits
+
 The vector of raw (non-normalized) predictions that a classification model generates, which is ordinarily then passed to a normalization function. If the model is solving a multi-class classification problem, logits typically become an input to the softmax function. The softmax function then generates a vector of (normalized) probabilities with one value for each possible class.
 
 * optimizer
+
 A specific implementation of the gradient descent algorithm.
 
 * step
+
 A forward and backward evaluation of one batch.
 step size
 Synonym for learning rate.
 
 * stochastic gradient descent (SGD)
+
 A gradient descent algorithm in which the batch size is one. In other words, SGD relies on a single example chosen uniformly at random from a data set to calculate an estimate of the gradient at each step.
 
 * [nn.CrossEntropyLoss](https://pytorch.org/docs/stable/nn.html#torch.nn.CrossEntropyLoss)
