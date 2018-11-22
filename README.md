@@ -401,7 +401,7 @@ The "knobs" that you tweak during successive runs of training a model. For examp
 
 A model that, taking inspiration from the brain, is composed of layers (at least one of which is hidden) consisting of simple connected units or neurons followed by nonlinearities.
 
-* MNIST
+* MNIST (Modified National Institute of Standards and Technology database)
 
 A public-domain data set compiled by LeCun, Cortes, and Burges containing 60,000 images, each image showing how a human manually wrote a particular digit from 0–9. Each image is stored as a 28x28 array of integers, where each integer is a grayscale value between 0 and 255, inclusive.
 <p align="center">
@@ -463,9 +463,41 @@ A gradient descent algorithm in which the batch size is one. In other words, SGD
 * [Optim Package](https://pytorch.org/docs/stable/optim.html)
 
 #### Classifying Fashion-MNIST
+* [the criterion](https://pytorch.org/docs/master/nn.html#loss-functions)
+* [the optimizer](http://pytorch.org/docs/master/optim.html)
 
 #### Inference and Validation
+* dropout regularization
+
+A form of regularization useful in training neural networks. Dropout regularization works by removing a random selection of a fixed number of the units in a network layer for a single gradient step. The more units dropped out, the stronger the regularization. This is analogous to training the network to emulate an exponentially large ensemble of smaller networks.
+
+* inference
+
+In machine learning, often refers to the process of making predictions by applying the trained model to unlabeled examples. In statistics, inference refers to the process of fitting the parameters of a distribution conditioned on some observed data. (See the Wikipedia article on statistical inference.)
+
+* overfitting
+
+Creating a model that matches the training data so closely that the model fails to make correct predictions on new data.
+
+* precision
+
+A metric for classification models. Precision identifies the frequency with which a model was correct when predicting the positive class.
+
+* recall
+
+A metric for classification models that answers the following question: Out of all the possible positive labels, how many did the model correctly identify?
+
+* validation set
+
+A subset of the data set—disjunct from the training set—that you use to adjust hyperparameters.
+
+* [nn.Dropout](https://pytorch.org/docs/stable/nn.html#torch.nn.Dropout)
+
 #### Saving and Loading Models
+* checkpoint
+
+Data that captures the state of the variables of a model at a particular time. Checkpoints enable exporting model weights, as well as performing training across multiple sessions. Checkpoints also enable training to continue past errors (for example, job preemption). Note that the graph itself is not included in a checkpoint.
+
 #### Loading Image Data
 #### Transfer Learning
 #### Tips, Tricks, and Other Notes
@@ -476,6 +508,9 @@ A gradient descent algorithm in which the batch size is one. In other words, SGD
 * [Tensors in PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%201%20-%20Tensors%20in%20PyTorch%20(Exercises).ipynb)
 * [Neural networks with PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%202%20-%20Neural%20Networks%20in%20PyTorch%20(Exercises).ipynb)
 * [Training Neural Networks](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%203%20-%20Training%20Neural%20Networks%20(Exercises).ipynb)
+* [Classifying Fashion-MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%204%20-%20Fashion-MNIST%20(Exercises).ipynb)
+* [Inference and Validation](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%205%20-%20Inference%20and%20Validation%20(Exercises).ipynb)
+* [Saving and Loading Models](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%206%20-%20Saving%20and%20Loading%20Models.ipynb)
 
 ## Lesson 5
 
