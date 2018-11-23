@@ -70,7 +70,6 @@ Contributions are always welcome!
     + [Loading Image Data](#loading-image-data)
     + [Transfer Learning](#transfer-learning)
     + [Tips, Tricks, and Other Notes](#tips-tricks-and-other-notes)
-  * [Quizes](#quizes-1)
   * [Notebooks](#notebooks-1)
 - [Lesson 5](#lesson-5)
 - [Lesson 6](#lesson-6)
