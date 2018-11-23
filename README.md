@@ -499,10 +499,19 @@ A subset of the data set—disjunct from the training set—that you use to adju
 Data that captures the state of the variables of a model at a particular time. Checkpoints enable exporting model weights, as well as performing training across multiple sessions. Checkpoints also enable training to continue past errors (for example, job preemption). Note that the graph itself is not included in a checkpoint.
 
 #### Loading Image Data
-#### Transfer Learning
-#### Tips, Tricks, and Other Notes
+* [`datasets.ImageFolder`](http://pytorch.org/docs/master/torchvision/datasets.html#imagefolder)
+* [`transforms`](http://pytorch.org/docs/master/torchvision/transforms.html)
+* [`DataLoader`](http://pytorch.org/docs/master/data.html#torch.utils.data.DataLoader)
 
-### Quizes
+#### Transfer Learning
+* [model](http://pytorch.org/docs/0.3.0/torchvision/models.html)
+* [CUDA](https://developer.nvidia.com/cuda-zone)
+
+#### Tips, Tricks, and Other Notes
+* Make use of the .shape method during debugging and development.
+* Make sure you're clearing the gradients in the training loop with `optimizer.zero_grad()`. 
+* If you're doing a validation loop, be sure to set the network to evaluation mode with `model.eval()`, then back to training mode with `model.train()`.
+* If you're trying to run your network on the GPU, check to make sure you've moved the model and all necessary tensors to the GPU with `.to(device)` where device is either `"cuda"` or `"cpu"`
 
 ### Notebooks
 * [Tensors in PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%201%20-%20Tensors%20in%20PyTorch%20(Exercises).ipynb)
@@ -511,6 +520,9 @@ Data that captures the state of the variables of a model at a particular time. C
 * [Classifying Fashion-MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%204%20-%20Fashion-MNIST%20(Exercises).ipynb)
 * [Inference and Validation](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%205%20-%20Inference%20and%20Validation%20(Exercises).ipynb)
 * [Saving and Loading Models](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%206%20-%20Saving%20and%20Loading%20Models.ipynb)
+* [Loading Image Data](https://colab.research.google.com/github/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%207%20-%20Loading%20Image%20Data%20(Exercises).ipynb#scrollTo=IVfPhjj-OCqv)
+* [Transfer Learning](https://colab.research.google.com/github/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%208%20-%20Transfer%20Learning%20(Exercises).ipynb#scrollTo=4_6rfBV_RLSA)
+
 
 ## Lesson 5
 
