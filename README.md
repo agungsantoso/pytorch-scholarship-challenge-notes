@@ -601,7 +601,7 @@ import torch
 import PIL
 ```
 
-* Click `Runtime` - `change Run time type`(unsure for name, because mine is written in Korean 런타임유형변경)
+* Click `Runtime` - `change Run time type`
 * Click `GPU`
 
 
