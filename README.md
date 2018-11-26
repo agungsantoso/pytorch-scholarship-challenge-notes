@@ -14,7 +14,7 @@ Contributions are always welcome!
 <!-- toc -->
 
 - [AMA](#ama)
-- [Lesson 2](#lesson-2)
+- [Lesson 2: Introduction to Neural Network](#lesson-2-introduction-to-neural-network)
   * [Lectures](#lectures)
     + [Classification Problems](#classification-problems)
     + [Decision Boundary](#decision-boundary)
@@ -47,7 +47,7 @@ Contributions are always welcome!
     + [Momentum](#momentum)
   * [Quizes](#quizes)
   * [Notebooks](#notebooks)
-- [Lesson 3](#lesson-3)
+- [Lesson 3: Talking PyTorch with Soumith Chintala](#lesson-3-talking-pytorch-with-soumith-chintala)
   * [Interview](#interview)
     + [Origins of PyTorch](#origins-of-pytorch)
     + [Debugging and Designing PyTorch](#debugging-and-designing-pytorch)
@@ -58,7 +58,7 @@ Contributions are always welcome!
     + [PyTorch and the Facebook Product](#pytorch-and-the-facebook-product)
     + [The Future of PyTorch](#the-future-of-pytorch)
     + [Learning More in AI](#learning-more-in-ai)
-- [Lesson 4](#lesson-4)
+- [Lesson 4: Introduction to PyTorch](#lesson-4-introduction-to-pytorch)
   * [Lectures](#lectures-1)
     + [Single layer neural networks](#single-layer-neural-networks)
     + [Networks Using Matrix Multiplication](#networks-using-matrix-multiplication)
@@ -71,7 +71,54 @@ Contributions are always welcome!
     + [Transfer Learning](#transfer-learning)
     + [Tips, Tricks, and Other Notes](#tips-tricks-and-other-notes)
   * [Notebooks](#notebooks-1)
-- [Lesson 5](#lesson-5)
+- [Lesson 5 : Convolutional Neural Networks](#lesson-5--convolutional-neural-networks)
+  * [Lectures](#lectures-2)
+    + [Applications of CNNs](#applications-of-cnns)
+    + [Lesson Outline](#lesson-outline)
+    + [MNIST Dataset](#mnist-dataset)
+    + [How Computers Interpret Images](#how-computers-interpret-images)
+    + [MLP Structure & Class Scores](#mlp-structure--class-scores)
+    + [Do Your Research](#do-your-research)
+    + [Loss & Optimization](#loss--optimization)
+    + [Defining a Network in PyTorch](#defining-a-network-in-pytorch)
+    + [Training the Network](#training-the-network)
+    + [Pre-Notebook: MLP Classification, Exercise](#pre-notebook-mlp-classification-exercise)
+    + [Notebook: MLP Classification, MNIST](#notebook-mlp-classification-mnist)
+    + [One Solution](#one-solution)
+    + [Model Validation](#model-validation)
+    + [Validation Loss](#validation-loss)
+    + [Image Classification Steps](#image-classification-steps)
+    + [MLPs vs CNNs](#mlps-vs-cnns)
+    + [Local Connectivity](#local-connectivity)
+    + [Filters and the Convolutional Layer](#filters-and-the-convolutional-layer)
+    + [Filters & Edges](#filters--edges)
+    + [Frequency in Images](#frequency-in-images)
+    + [High-pass Filters](#high-pass-filters)
+    + [Quiz: Kernels](#quiz-kernels)
+    + [OpenCV & Creating Custom Filters](#opencv--creating-custom-filters)
+    + [Notebook: Finding Edges](#notebook-finding-edges)
+    + [Convolutional Layer](#convolutional-layer)
+    + [Convolutional Layers (Part 2)](#convolutional-layers-part-2)
+    + [Stride and Padding](#stride-and-padding)
+    + [Pooling Layers](#pooling-layers)
+    + [Notebook: Layer Visualization](#notebook-layer-visualization)
+    + [Increasing Depth](#increasing-depth)
+    + [CNNs for Image Classification](#cnns-for-image-classification)
+    + [Convolutional Layers in PyTorch](#convolutional-layers-in-pytorch)
+    + [Feature Vector](#feature-vector)
+    + [CIFAR Classification Example](#cifar-classification-example)
+    + [Notebook: CNN Classification](#notebook-cnn-classification)
+    + [CNNs in PyTorch](#cnns-in-pytorch)
+    + [Image Augmentation](#image-augmentation)
+    + [Augmentation Using Transformations](#augmentation-using-transformations)
+    + [Groundbreaking CNN Architectures](#groundbreaking-cnn-architectures)
+    + [Visualizing CNNs (Part 1)](#visualizing-cnns-part-1)
+    + [Visualizing CNNs (Part 2)](#visualizing-cnns-part-2)
+    + [Summary of CNNs](#summary-of-cnns)
+  * [Quizes](#quizes-1)
+    + [Q1 - 5.5: How Computers Interpret Images](#q1---55-how-computers-interpret-images)
+    + [Q2 - 5.6: MLP Structure & Class Scores](#q2---56-mlp-structure--class-scores)
+  * [Notebooks](#notebooks-2)
 - [Lesson 6](#lesson-6)
 - [Lesson 7](#lesson-7)
 - [Lesson 8](#lesson-8)
@@ -90,7 +137,7 @@ Contributions are always welcome!
 * [2018-11-15 A](https://drive.google.com/open?id=1x-QXNcVXKu-VokKvRlX9NreT9atQTyHK)
 * [2018-11-15 B](https://drive.google.com/open?id=1mstM3SvvhIIwcBbtClzXaLx37Z9oHozX)
 
-## Lesson 2
+## Lesson 2: Introduction to Neural Network
 ### Lectures
 #### Classification Problems
   The problem of identifying to which of a set of categories (sub-populations) a new observation belongs.
@@ -314,7 +361,7 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 * [Gradient Descent](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-neural-networks/gradient-descent/GradientDescent.ipynb)
 * [Analyzing Student Data](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-neural-networks/student-admissions/StudentAdmissions.ipynb)
 
-## Lesson 3
+## Lesson 3: Talking PyTorch with Soumith Chintala
 ### Interview
 #### Origins of PyTorch
 *  Soumith Chintala always wanted to be a visual effects artist at least when he started his undergrad and then he interned at a place and they said he's not good enough
@@ -371,7 +418,7 @@ A sophisticated gradient descent algorithm in which a learning step depends not 
 * Ethos that that as students are yet trying to get into the field of deep learning either to apply it to their own stuff or just to learn the concepts it's very important to make sure you do it from day one
 * my only advice to people is to make sure you do lesser but like do it hands-on
 
-## Lesson 4
+## Lesson 4: Introduction to PyTorch
 
 ### Lectures
 
@@ -500,7 +547,7 @@ Data that captures the state of the variables of a model at a particular time. C
 #### Loading Image Data
 * [`datasets.ImageFolder`](http://pytorch.org/docs/master/torchvision/datasets.html#imagefolder)
 * [`transforms`](http://pytorch.org/docs/master/torchvision/transforms.html)
-* [`DataLoader`](http://pytorch.org/docs/master/data.html#torch.utils.data.DataLoader)
+  * [`DataLoader`]  (http://pytorch.org/docs/master/data.html#torch.utils.data.DataLoader)
 
 #### Transfer Learning
 * [model](http://pytorch.org/docs/0.3.0/torchvision/models.html)
@@ -523,7 +570,130 @@ Data that captures the state of the variables of a model at a particular time. C
 * [Transfer Learning](https://colab.research.google.com/github/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%208%20-%20Transfer%20Learning%20(Exercises).ipynb#scrollTo=4_6rfBV_RLSA)
 
 
-## Lesson 5
+## Lesson 5 : Convolutional Neural Networks
+### Lectures
+#### Applications of CNNs
+* [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
+* [Text Classification](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/)
+* [Language Translation](https://code.facebook.com/posts/1978007565818999/a-novel-approach-to-neural-machine-translation/)
+* [Play Atari games](https://deepmind.com/research/dqn/)
+* [Play Pictionary](https://quickdraw.withgoogle.com/#)
+* [Play Go](https://deepmind.com/research/alphago/)
+* [CNNs powered Drone](https://www.youtube.com/watch?v=wSFYOw4VIYY)
+* Self-Driving Car
+* [Predict depth from a single image](https://www.cs.nyu.edu/~deigen/depth/)
+* [Localize breast cancer](https://research.googleblog.com/2017/03/assisting-pathologists-in-detecting.html)
+* [Save endangered species](https://blogs.nvidia.com/blog/2016/11/04/saving-endangered-species/?adbsc=social_20170303_70517416)
+* [Face App](http://www.digitaltrends.com/photography/faceapp-neural-net-image-editing/)
+
+#### Lesson Outline
+* __A feature__ is to think about what we are visually drawn to when we first see an object and when we identify different objects. For example what do we look at to distinguish a cat and a dog? The shape of the eyes, the size, and how they move
+
+#### MNIST Dataset
+* Most famous database
+
+<p align="center">
+  <img src="./images/lesson-5/mnist.png" width="50%">
+</p>
+
+#### How Computers Interpret Images
+* __Data normalization__ is an important pre-processing step. It ensures that each input (each pixel value, in this case) comes from a standard distribution. 
+
+* [Normalize transformation in PyTorch](https://pytorch.org/docs/stable/torchvision/transforms.html#transforms-on-torch-tensor)
+
+#### MLP Structure & Class Scores
+* MLP = Multi Layer Perceptron
+
+#### Do Your Research
+
+#### Loss & Optimization
+
+#### Defining a Network in PyTorch
+
+#### Training the Network
+
+#### Pre-Notebook: MLP Classification, Exercise
+
+#### Notebook: MLP Classification, MNIST
+
+#### One Solution
+
+#### Model Validation
+
+#### Validation Loss
+
+#### Image Classification Steps
+
+#### MLPs vs CNNs
+
+#### Local Connectivity
+
+#### Filters and the Convolutional Layer
+
+#### Filters & Edges
+
+#### Frequency in Images
+
+#### High-pass Filters
+
+#### Quiz: Kernels
+
+#### OpenCV & Creating Custom Filters
+
+#### Notebook: Finding Edges
+
+#### Convolutional Layer
+
+#### Convolutional Layers (Part 2)
+
+#### Stride and Padding
+
+#### Pooling Layers
+
+#### Notebook: Layer Visualization
+
+#### Increasing Depth
+
+#### CNNs for Image Classification
+
+#### Convolutional Layers in PyTorch
+
+#### Feature Vector
+
+#### CIFAR Classification Example
+
+#### Notebook: CNN Classification
+
+#### CNNs in PyTorch
+
+#### Image Augmentation
+
+#### Augmentation Using Transformations
+
+#### Groundbreaking CNN Architectures
+
+#### Visualizing CNNs (Part 1)
+
+#### Visualizing CNNs (Part 2)
+
+#### Summary of CNNs
+
+### Quizes
+#### Q1 - 5.5: How Computers Interpret Images
+* Q: In the case of our 28x28 images, how many entries will the corresponding, image vector have when this matrix is flattened?
+* A: `784`
+* E: `28*28*1 values = 784`
+
+#### Q2 - 5.6: MLP Structure & Class Scores
+<p align="center">
+  <img src="./images/lesson-5/q2.PNG" width="50%">
+</p>
+
+* Q: After looking at existing work, how many hidden layers will you use in your MLP for image classification?
+* A: 2
+* E: There is not one correct answer here, but one or two hidden layers should work fine for this simple task, and it's always good to do your research!
+
+### Notebooks
 
 
 ## Lesson 6
