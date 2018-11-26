@@ -606,7 +606,6 @@ import PIL
 
 
 
-
 ## Lesson 5 : Convolutional Neural Networks
 ### Lectures
 #### Applications of CNNs
@@ -638,8 +637,20 @@ import PIL
 
 * [Normalize transformation in PyTorch](https://pytorch.org/docs/stable/torchvision/transforms.html#transforms-on-torch-tensor)
 
-#### MLP Structure & Class Scores
-* MLP = Multi Layer Perceptron
+#### MLP (Multi Layer Perceptron) Structure & Class Scores
+* layer
+
+A set of neurons in a neural network that process a set of input features, or the output of those neurons.
+
+Layers are Python functions that take Tensors and configuration options as input and produce other tensors as output. Once the necessary Tensors have been composed, the user can convert the result into an Estimator via a model function.
+
+* class
+
+One of a set of enumerated target values for a label. For example, in a binary classification model that detects spam, the two classes are spam and not spam. In a multi-class classification model that identifies dog breeds, the classes would be poodle, beagle, pug, and so on.
+
+* scoring
+
+The part of a recommendation system that provides a value or ranking for each item produced by the candidate generation phase.
 
 #### Do Your Research
 
