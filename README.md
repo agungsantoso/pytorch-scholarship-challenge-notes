@@ -623,9 +623,16 @@ import PIL
 * [Face App](http://www.digitaltrends.com/photography/faceapp-neural-net-image-editing/)
 
 #### Lesson Outline
+* About CNN (Convolutional Neural Network) and how they improve our ability to classify images
+* How CNN identify features and how CNN can be used for image classification
+* Various layer that make up a complete CNN
 * __A feature__ is to think about what we are visually drawn to when we first see an object and when we identify different objects. For example what do we look at to distinguish a cat and a dog? The shape of the eyes, the size, and how they move
 
 #### MNIST Dataset
+<p align="center">
+  <img src="./images/lesson-5/mnist-database.PNG" width="50%">
+</p>
+
 * Most famous database
 
 <p align="center">
@@ -633,16 +640,30 @@ import PIL
 </p>
 
 #### How Computers Interpret Images
+<p align="center">
+  <img src="./images/lesson-5/normalization.PNG" width="50%">
+</p>
 * __Data normalization__ is an important pre-processing step. It ensures that each input (each pixel value, in this case) comes from a standard distribution. 
 
 * [Normalize transformation in PyTorch](https://pytorch.org/docs/stable/torchvision/transforms.html#transforms-on-torch-tensor)
 
+<p align="center">
+  <img src="./images/lesson-5/flattening.PNG" width="50%">
+</p>
+
 #### MLP (Multi Layer Perceptron) Structure & Class Scores
+<p align="center">
+  <img src="./images/lesson-5/mlp.PNG" width="50%">
+</p>
 * layer
 
 A set of neurons in a neural network that process a set of input features, or the output of those neurons.
 
 Layers are Python functions that take Tensors and configuration options as input and produce other tensors as output. Once the necessary Tensors have been composed, the user can convert the result into an Estimator via a model function.
+
+<p align="center">
+  <img src="./images/lesson-5/class-scores.PNG" width="50%">
+</p>
 
 * class
 
