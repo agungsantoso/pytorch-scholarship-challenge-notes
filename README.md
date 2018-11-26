@@ -643,6 +643,7 @@ import PIL
 <p align="center">
   <img src="./images/lesson-5/normalization.PNG" width="50%">
 </p>
+
 * __Data normalization__ is an important pre-processing step. It ensures that each input (each pixel value, in this case) comes from a standard distribution. 
 
 * [Normalize transformation in PyTorch](https://pytorch.org/docs/stable/torchvision/transforms.html#transforms-on-torch-tensor)
