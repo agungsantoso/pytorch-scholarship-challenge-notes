@@ -71,6 +71,8 @@ Contributions are always welcome!
     + [Transfer Learning](#transfer-learning)
     + [Tips, Tricks, and Other Notes](#tips-tricks-and-other-notes)
   * [Notebooks](#notebooks-1)
+  * [Tips & Trick](#tips--trick)
+    + [Things to run torch Training with GPU in colab](#things-to-run-torch-training-with-gpu-in-colab)
 - [Lesson 5 : Convolutional Neural Networks](#lesson-5--convolutional-neural-networks)
   * [Lectures](#lectures-2)
     + [Applications of CNNs](#applications-of-cnns)
@@ -568,6 +570,41 @@ Data that captures the state of the variables of a model at a particular time. C
 * [Saving and Loading Models](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%206%20-%20Saving%20and%20Loading%20Models.ipynb)
 * [Loading Image Data](https://colab.research.google.com/github/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%207%20-%20Loading%20Image%20Data%20(Exercises).ipynb#scrollTo=IVfPhjj-OCqv)
 * [Transfer Learning](https://colab.research.google.com/github/agungsantoso/deep-learning-v2-pytorch/blob/master/intro-to-pytorch/Part%208%20-%20Transfer%20Learning%20(Exercises).ipynb#scrollTo=4_6rfBV_RLSA)
+
+### Tips & Trick
+#### [Things to run torch Training with GPU in colab](https://pytorchfbchallenge.slack.com/archives/CE15VH5KJ/p1543083497415500)
+* install pytorch
+```
+# http://pytorch.org/
+from os.path import exists
+from wheel.pep425tags import get_abbr_impl, get_impl_ver, get_abi_tag
+platform = '{}{}-{}'.format(get_abbr_impl(), get_impl_ver(), get_abi_tag())
+cuda_output = !ldconfig -p|grep cudart.so|sed -e 's/.*\.\([0-9]*\)\.\([0-9]*\)$/cu\1\2/'
+accelerator = cuda_output[0] if exists('/dev/nvidia0') else 'cpu'
+
+!pip install -q http://download.pytorch.org/whl/{accelerator}/torch-0.4.1-{platform}-linux_x86_64.whl torchvision
+import torch
+```
+
+* download dataset
+```
+!wget -c https://s3.amazonaws.com/content.udacity-data.com/nd089/Cat_Dog_data.zip;
+!unzip -qq Cat_Dog_data.zip;
+!wget -c https://raw.githubusercontent.com/udacity/deep-learning-v2-pytorch/master/intro-to-pytorch/helper.py
+```
+
+* other dependencies
+```
+!pip install Pillow==4.0.0
+!pip install PIL
+!pip install image
+import PIL
+```
+
+* Click `Runtime` - `change Run time type`(unsure for name, because mine is written in Korean 런타임유형변경)
+* Click `GPU`
+
+
 
 
 ## Lesson 5 : Convolutional Neural Networks
