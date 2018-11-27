@@ -79,13 +79,11 @@ Contributions are always welcome!
     + [Lesson Outline](#lesson-outline)
     + [MNIST Dataset](#mnist-dataset)
     + [How Computers Interpret Images](#how-computers-interpret-images)
-    + [MLP Structure & Class Scores](#mlp-structure--class-scores)
+    + [MLP (Multi Layer Perceptron) Structure & Class Scores](#mlp-multi-layer-perceptron-structure--class-scores)
     + [Do Your Research](#do-your-research)
     + [Loss & Optimization](#loss--optimization)
     + [Defining a Network in PyTorch](#defining-a-network-in-pytorch)
     + [Training the Network](#training-the-network)
-    + [Pre-Notebook: MLP Classification, Exercise](#pre-notebook-mlp-classification-exercise)
-    + [Notebook: MLP Classification, MNIST](#notebook-mlp-classification-mnist)
     + [One Solution](#one-solution)
     + [Model Validation](#model-validation)
     + [Validation Loss](#validation-loss)
@@ -675,16 +673,50 @@ One of a set of enumerated target values for a label. For example, in a binary c
 The part of a recommendation system that provides a value or ranking for each item produced by the candidate generation phase.
 
 #### Do Your Research
+* More hidden layers generally means more ability to recognize complex pattern
+* One or two hidden layers should work fine for small images
+* Keep looking for a resource or two that appeals to you
+* Try out the models in code
+
+<p align="center">
+  <img src="./images/lesson-5/do-your-research.PNG" width="50%">
+</p>
 
 #### Loss & Optimization
 
+<p align="center">
+  <img src="./images/lesson-5/learn-from-mistakes.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/cross-entropy-loss.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/gradient-descent.PNG" width="50%">
+</p>
+
 #### Defining a Network in PyTorch
+* Rectified Linear Unit (ReLU)
+
+An activation function with the following rules:
+  * If input is negative or zero, output is 0.
+  * If input is positive, output is equal to input.
+
+<p align="center">
+  <img src="./images/lesson-5/relu-ex.PNG" width="50%">
+</p>
+
 
 #### Training the Network
+The steps for training/learning from a batch of data are described in the comments below:
 
-#### Pre-Notebook: MLP Classification, Exercise
-
-#### Notebook: MLP Classification, MNIST
+1. Clear the gradients of all optimized variables
+2. Forward pass: compute predicted outputs by passing inputs to the model
+3. Calculate the loss
+4. Backward pass: compute gradient of the loss with respect to model parameters
+5. Perform a single optimization step (parameter update)
+6. Update average training loss
 
 #### One Solution
 
@@ -764,7 +796,7 @@ The part of a recommendation system that provides a value or ranking for each it
 * E: There is not one correct answer here, but one or two hidden layers should work fine for this simple task, and it's always good to do your research!
 
 ### Notebooks
-
+* [Multi-Layer Perceptron, MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/mnist-mlp/mnist_mlp_exercise.ipynb)
 
 ## Lesson 6
 
