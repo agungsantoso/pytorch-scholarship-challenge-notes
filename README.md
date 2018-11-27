@@ -704,7 +704,7 @@ An activation function with the following rules:
   * If input is positive, output is equal to input.
 
 <p align="center">
-  <img src="./images/lesson-5/relu-ex.PNG" width="50%">
+  <img src="./images/lesson-5/relu-ex.png" width="50%">
 </p>
 
 
