@@ -707,7 +707,6 @@ An activation function with the following rules:
   <img src="./images/lesson-5/relu-ex.png" width="50%">
 </p>
 
-
 #### Training the Network
 The steps for training/learning from a batch of data are described in the comments below:
 
@@ -719,16 +718,46 @@ The steps for training/learning from a batch of data are described in the commen
 6. Update average training loss
 
 #### One Solution
+* `model.eval()` will set all the layers in your model to evaluation mode. 
+* This affects layers like dropout layers that turn "off" nodes during training with some probability, but should allow every node to be "on" for evaluation. 
+* So, you should set your model to evaluation mode before testing or validating your model and set it to `model.train()` (training mode) only during the training loop.
 
 #### Model Validation
+<p align="center">
+  <img src="./images/lesson-5/model-validation.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/early-stopping.PNG" width="50%">
+</p>
 
 #### Validation Loss
+* We create a validation set to:
+  1. Measure how well a model generalizes, during training
+  2. Tell us when to stop training a model; when the validation loss stops decreasing (and especially when the validation loss starts increasing and the training loss is still decreasing)
 
 #### Image Classification Steps
 
+<p align="center">
+  <img src="./images/lesson-5/image-classification-steps.PNG" width="50%">
+</p>
+
 #### MLPs vs CNNs
+* MNIST already centered, real image can be any position
+<p align="center">
+  <img src="./images/lesson-5/mnist-vs-real.PNG" width="50%">
+</p>
 
 #### Local Connectivity
+* Difference between MLP vs CNN
+<p align="center">
+  <img src="./images/lesson-5/mlp-vs-cnn.PNG" width="50%">
+</p>
+
+* Sparsely connected layer
+<p align="center">
+  <img src="./images/lesson-5/local-conn.PNG" width="50%">
+</p>
 
 #### Filters and the Convolutional Layer
 
@@ -797,6 +826,7 @@ The steps for training/learning from a batch of data are described in the commen
 
 ### Notebooks
 * [Multi-Layer Perceptron, MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/mnist-mlp/mnist_mlp_exercise.ipynb)
+* [Multi-Layer Perceptron, MNIST (With Validation)](https://colab.research.google.com/drive/1u4FmtGa24clNIp3sdltqRxyaEHEi-fGe)
 
 ## Lesson 6
 
