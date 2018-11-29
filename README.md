@@ -786,7 +786,7 @@ The steps for training/learning from a batch of data are described in the commen
 #### Frequency in Images
 
 <p align="center">
-  <img src="./images/lesson-5/hf-image.PNG" width="50%">
+  <img src="./images/lesson-5/hf-image.png" width="50%">
 </p>
 
 * Frequency in images is a __rate of change__.
