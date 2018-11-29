@@ -875,7 +875,7 @@ The steps for training/learning from a batch of data are described in the commen
 
 #### Q3 - 5.24: Kernels
 <p align="center">
-  <img src="./images/lesson-5/q3.PNG" width="50%">
+  <img src="./images/lesson-5/q3.png" width="50%">
 </p>
 
 * Q: Of the four kernels pictured above, which would be best for finding and enhancing horizontal edges and lines in an image?
