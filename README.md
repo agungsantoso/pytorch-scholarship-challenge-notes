@@ -777,7 +777,11 @@ The steps for training/learning from a batch of data are described in the commen
 * To identify the edges of an object, look at abrupt changes in intensity
 * Filters
 
-To detect changes in intensity in an image, look at groups of pixels and react to alternating patterns of dark/light pixels. Producing an output that shows edges of objects and differing textures.
+  To detect changes in intensity in an image, look at groups of pixels and react to alternating patterns of dark/light pixels. Producing an output that shows edges of objects and differing textures.
+
+* Edges
+
+  Area in images where the intensity changes very quickly
 
 #### Frequency in Images
 
@@ -791,10 +795,26 @@ To detect changes in intensity in an image, look at groups of pixels and react t
 * __High-frequency components__ also correspond to __the edges__ of objects in images, which can help us classify those objects.
 
 #### High-pass Filters
+<p align="center">
+  <img src="./images/lesson-5/filters.PNG" width="50%">
+</p>
+<p align="center">
+  <img src="./images/lesson-5/high-pass filters.PNG" width="50%">
+</p>
+<p align="center">
+  <img src="./images/lesson-5/edge-detection.PNG" width="50%">
+</p>
+<p align="center">
+  <img src="./images/lesson-5/convolution-formula.PNG" width="50%">
+</p>
+<p align="center">
+  <img src="./images/lesson-5/convolution.PNG" width="50%">
+</p>
+
 * Edge Handling
-  * __Extend__ The nearest border pixels are conceptually extended as far as necessary to provide values for the convolution. Corner pixels are extended in 90° wedges. Other edge pixels are extended in lines.
+  * __Extend__  Corner pixels are extended in 90° wedges. Other edge pixels are extended in lines.
   * __Padding__ The image is padded with a border of 0's, black pixels.
-  * __Crop__ Any pixel in the output image which would require values from beyond the edge is skipped. This method can result in the output image being slightly smaller, with the edges having been cropped.
+  * __Crop__ Any pixel in the output image which would require values from beyond the edge is skipped.
 
 
 #### OpenCV & Creating Custom Filters
