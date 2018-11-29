@@ -737,7 +737,6 @@ The steps for training/learning from a batch of data are described in the commen
   2. Tell us when to stop training a model; when the validation loss stops decreasing (and especially when the validation loss starts increasing and the training loss is still decreasing)
 
 #### Image Classification Steps
-
 <p align="center">
   <img src="./images/lesson-5/image-classification-steps.PNG" width="50%">
 </p>
@@ -760,16 +759,46 @@ The steps for training/learning from a batch of data are described in the commen
 </p>
 
 #### Filters and the Convolutional Layer
+* CNN is special kind of NN that can remember spatial information
+* The key to remember spatial information is convolutional layer, which apply series of different image filters (convolutional kernels) to input image
+
+<p align="center">
+  <img src="./images/lesson-5/filtered-images.PNG" width="50%">
+</p>
+
+* CNN should learn to identify spatial patterns like curves and lines that make up number six
+
+<p align="center">
+  <img src="./images/lesson-5/conv-layer.PNG" width="50%">
+</p>
 
 #### Filters & Edges
+* Intensity is a measure of light and dark, similiar to brightness
+* To identify the edges of an object, look at abrupt changes in intensity
+* Filters
+
+To detect changes in intensity in an image, look at groups of pixels and react to alternating patterns of dark/light pixels. Producing an output that shows edges of objects and differing textures.
 
 #### Frequency in Images
 
-#### High-pass Filters
+<p align="center">
+  <img src="./images/lesson-5/hf-image.PNG" width="50%">
+</p>
 
-#### Quiz: Kernels
+* Frequency in images is a __rate of change__.
+  * on the scarf and striped shirt, we have a high-frequency image pattern
+  * parts of the sky and background that change very gradually, which is considered a smooth, low-frequency pattern
+* __High-frequency components__ also correspond to __the edges__ of objects in images, which can help us classify those objects.
+
+#### High-pass Filters
+* Edge Handling
+  * __Extend__ The nearest border pixels are conceptually extended as far as necessary to provide values for the convolution. Corner pixels are extended in 90° wedges. Other edge pixels are extended in lines.
+  * __Padding__ The image is padded with a border of 0's, black pixels.
+  * __Crop__ Any pixel in the output image which would require values from beyond the edge is skipped. This method can result in the output image being slightly smaller, with the edges having been cropped.
+
 
 #### OpenCV & Creating Custom Filters
+* [OpenCV](http://opencv.org/about.html) is a computer vision and machine learning software library that includes many common image analysis algorithms that will help us build custom, intelligent computer vision applications.
 
 #### Notebook: Finding Edges
 
@@ -823,6 +852,15 @@ The steps for training/learning from a batch of data are described in the commen
 * Q: After looking at existing work, how many hidden layers will you use in your MLP for image classification?
 * A: 2
 * E: There is not one correct answer here, but one or two hidden layers should work fine for this simple task, and it's always good to do your research!
+
+#### Q3 - 5.24: Kernels
+<p align="center">
+  <img src="./images/lesson-5/q3.PNG" width="50%">
+</p>
+
+* Q: Of the four kernels pictured above, which would be best for finding and enhancing horizontal edges and lines in an image?
+* A: `d`
+* E: This kernel finds the difference between the top and bottom edges surrounding a given pixel.
 
 ### Notebooks
 * [Multi-Layer Perceptron, MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/mnist-mlp/mnist_mlp_exercise.ipynb)
