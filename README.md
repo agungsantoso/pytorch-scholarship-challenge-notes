@@ -95,12 +95,10 @@ Contributions are always welcome!
     + [Frequency in Images](#frequency-in-images)
     + [High-pass Filters](#high-pass-filters)
     + [OpenCV & Creating Custom Filters](#opencv--creating-custom-filters)
-    + [Notebook: Finding Edges](#notebook-finding-edges)
     + [Convolutional Layer](#convolutional-layer)
     + [Convolutional Layers (Part 2)](#convolutional-layers-part-2)
     + [Stride and Padding](#stride-and-padding)
     + [Pooling Layers](#pooling-layers)
-    + [Notebook: Layer Visualization](#notebook-layer-visualization)
     + [Increasing Depth](#increasing-depth)
     + [CNNs for Image Classification](#cnns-for-image-classification)
     + [Convolutional Layers in PyTorch](#convolutional-layers-in-pytorch)
@@ -820,17 +818,88 @@ The steps for training/learning from a batch of data are described in the commen
 #### OpenCV & Creating Custom Filters
 * [OpenCV](http://opencv.org/about.html) is a computer vision and machine learning software library that includes many common image analysis algorithms that will help us build custom, intelligent computer vision applications.
 
-#### Notebook: Finding Edges
-
 #### Convolutional Layer
+A layer of a deep neural network in which a convolutional filter passes along an input matrix. For example, consider the following 3x3 convolutional filter:
+
+<p align="center">
+  <img src="./images/lesson-5/3x3.svg" width="25%">
+</p>
+
+The following animation shows a convolutional layer consisting of 9 convolutional operations involving the 5x5 input matrix. Notice that each convolutional operation works on a different 3x3 slice of the input matrix. The resulting 3x3 matrix (on the right) consists of the results of the 9 convolutional operations:
+
+<p align="center">
+  <img src="./images/lesson-5/conv-anim.gif" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/conv-layer-1.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/conv-layer-2.PNG" width="50%">
+</p>
+
+* convolutional neural network
+
+  A neural network in which at least one layer is a convolutional layer. A typical convolutional neural network consists of some combination of the following layers:
+
+  * convolutional layers
+  * pooling layers
+  * dense layers
+
+  Convolutional neural networks have had great success in certain kinds of problems, such as image recognition.
+
+<p align="center">
+  <img src="./images/lesson-5/cnn.PNG" width="50%">
+</p>
+
+* See Also:
+  * [Convolution](https://developers.google.com/machine-learning/glossary/#convolution)
+  * [Convolutional Filter](https://developers.google.com/machine-learning/glossary/#convolutional_filter)
+  * [Convolutional Operation](https://developers.google.com/machine-learning/glossary/#convolutional_operation)
 
 #### Convolutional Layers (Part 2)
+* Grayscale image -> 2D Matrix
+* Color image -> 3 layers of 2D Matrix, one for each channel (Red, Green, Blue)
+
+<p align="center">
+  <img src="./images/lesson-5/conv-layer-rgb.PNG" width="50%">
+</p>
 
 #### Stride and Padding
+* Increase __the number of node__ in convolutional layer -> increase __the number of filter__ 
+* increase __the size of detected pattern__ -> increase __the size of filter__
+* __Stride__ is the amount by which the filter slides over the image
+* Size of convolutional layer depend on what we do at the edge of our image
+
+<p align="center">
+  <img src="./images/lesson-5/edge-skip.PNG" width="50%">
+</p>
+
+* __Padding__ give filter more space to move by padding zeros to the edge of image
+
+<p align="center">
+  <img src="./images/lesson-5/padding.PNG" width="50%">
+</p>
 
 #### Pooling Layers
+* pooling
+  
+  Reducing a matrix (or matrices) created by an earlier convolutional layer to a smaller matrix. Pooling usually involves taking either the maximum or average value across the pooled area. For example, suppose we have the following 3x3 matrix:
 
-#### Notebook: Layer Visualization
+  <p align="center">
+    <img src="./images/lesson-5/PoolingStart.svg" width="25%">
+  </p>
+
+  A pooling operation, just like a convolutional operation, divides that matrix into slices and then slides that convolutional operation by strides. For example, suppose the pooling operation divides the convolutional matrix into 2x2 slices with a 1x1 stride. As the following diagram illustrates, four pooling operations take place. Imagine that each pooling operation picks the maximum value of the four in that slice:
+
+  <p align="center">
+    <img src="./images/lesson-5/PoolingConvolution.svg" width="75%">
+  </p>
+
+  Pooling helps enforce translational invariance in the input matrix.
+
+  Pooling for vision applications is known more formally as spatial pooling. Time-series applications usually refer to pooling as temporal pooling. Less formally, pooling is often called subsampling or downsampling.
 
 #### Increasing Depth
 
@@ -885,6 +954,9 @@ The steps for training/learning from a batch of data are described in the commen
 ### Notebooks
 * [Multi-Layer Perceptron, MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/mnist-mlp/mnist_mlp_exercise.ipynb)
 * [Multi-Layer Perceptron, MNIST (With Validation)](https://colab.research.google.com/drive/1u4FmtGa24clNIp3sdltqRxyaEHEi-fGe)
+* [Creating a Filter, Edge Detection](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/conv-visualization/custom_filters.ipynb)
+* [Convolutional Layer](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/conv-visualization/conv_visualization.ipynb)
+* [Maxpooling Layer](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/conv-visualization/maxpooling_visualization.ipynb)
 
 ## Lesson 6
 
