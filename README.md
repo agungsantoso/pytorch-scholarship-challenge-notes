@@ -1148,15 +1148,19 @@ nn.MaxPool2d(2, 2)
 * A: `20`
 * E: the final depth is determined by the last convolutional layer, which has a `depth` = `out_channels` = 20.
 
+
 * Q: What is the x-y size of the output of the final maxpooling layer? Careful to look at how the 130x130 image passes through (and shrinks) as it moved through each convolutional and pooling layer.
 * A: 16
 * E: The 130x130 image shrinks by one after the first convolutional layer, then is down-sampled by 4 then 2 after each successive maxpooling layer!
   `((W_in - F + 2P) / S) + 1`
-  
+
+  ```
   ((130 - 3 + 2*0) / 1) + 1 = 128
   128 / 4 = 32
   ((32 - 5 + 2*2) / 1) + 1 = 32
   32 / 2 = 16
+  ```
+
 
 * Q: How many parameters, total, will be left after an image passes through all four of the above layers in sequence?
 * A: `16*16*20`
