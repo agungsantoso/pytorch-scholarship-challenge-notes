@@ -104,10 +104,7 @@ Contributions are always welcome!
     + [Convolutional Layers in PyTorch](#convolutional-layers-in-pytorch)
     + [Feature Vector](#feature-vector)
     + [CIFAR Classification Example](#cifar-classification-example)
-    + [Notebook: CNN Classification](#notebook-cnn-classification)
-    + [CNNs in PyTorch](#cnns-in-pytorch)
     + [Image Augmentation](#image-augmentation)
-    + [Augmentation Using Transformations](#augmentation-using-transformations)
     + [Groundbreaking CNN Architectures](#groundbreaking-cnn-architectures)
     + [Visualizing CNNs (Part 1)](#visualizing-cnns-part-1)
     + [Visualizing CNNs (Part 2)](#visualizing-cnns-part-2)
@@ -116,6 +113,8 @@ Contributions are always welcome!
     + [Q1 - 5.5: How Computers Interpret Images](#q1---55-how-computers-interpret-images)
     + [Q2 - 5.6: MLP Structure & Class Scores](#q2---56-mlp-structure--class-scores)
     + [Q3 - 5.24: Kernels](#q3---524-kernels)
+    + [Q4 - 5.32: CNN's for Image Classification](#q4---532-cnns-for-image-classification)
+    + [Q5 - 5.33: Convolutional Layers in PyTorch](#q5---533-convolutional-layers-in-pytorch)
   * [Notebooks](#notebooks-2)
 - [Lesson 6](#lesson-6)
 - [Lesson 7](#lesson-7)
@@ -902,30 +901,208 @@ The following animation shows a convolutional layer consisting of 9 convolutiona
   Pooling for vision applications is known more formally as spatial pooling. Time-series applications usually refer to pooling as temporal pooling. Less formally, pooling is often called subsampling or downsampling.
 
 #### Increasing Depth
+* Incresing depth is actually:
+  * extracting more and more complex pattern and features that help identify the content and the objects in an image
+  * discarding some spatial information abaout feature like a smooth background that don't help identify the image
+
+<p align="center">
+  <img src="./images/lesson-5/increasing-depth.PNG" width="50%">
+</p>
 
 #### CNNs for Image Classification
 
+<p align="center">
+  <img src="./images/lesson-5/cnn-img-class.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/cnn-img-class-2.PNG" width="50%">
+</p>
+
 #### Convolutional Layers in PyTorch
+* init
+
+```
+self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0)
+```
+
+* forward
+
+```
+x = F.relu(self.conv1(x))
+```
+
+* arguments
+  * `in_channels` - number of inputs (in depth)
+  * `out_channels` - number of output channels
+  * `kernel_size` - height and width (square) of convolutional kernel
+  * `stride` - default `1`
+  * `padding` - default `0`
+  * [documentation](https://pytorch.org/docs/stable/nn.html#conv2d)
+
+* pooling layers
+
+  down sampling factors
+
+  ```
+  self.pool = nn.MaxPool2d(2,2)
+  ```
+
+  * forward
+
+  ```
+  x = F.relu(self.conv1(x))
+  x = self.pool(x)
+  ```
+
+  * example #1
+
+  ```
+  self.conv1 = nn.Conv2d(1, 16, 2, stride=2)
+  ```
+
+    * grayscale images (1 depth)
+    * 16 filter
+    * filter size 2x2
+    * filter jump 2 pixels at a time
+
+  * example #2  
+
+  ```
+  self.conv2 = nn.Conv2d(16, 32, 3, padding=1)
+  ```
+
+    * 16 input from output of example #1
+    * 32 filters
+    * filter size 3x3
+    * jump 1 pixel at a time
+
+* sequential models
+    
+  ```
+  def __init__(self):
+        super(ModelName, self).__init__()
+        self.features = nn.Sequential(
+              nn.Conv2d(1, 16, 2, stride=2),
+              nn.MaxPool2d(2, 2),
+              nn.ReLU(True),
+
+              nn.Conv2d(16, 32, 3, padding=1),
+              nn.MaxPool2d(2, 2),
+              nn.ReLU(True) 
+         )
+  ```
+
+  * formula: number of parameters in a convolutional layer
+
+    * `K` - number of filter
+    * `F` - filter size
+    * `D_in` - last value in the `input shape`
+    
+    `(K * F*F * D_in) + K`
+
+  * formula: shape of a convolutional layer
+
+    * `K` - number of filter
+    * `F` - filter size
+    * `S` - stride
+    * `P` - padding
+    * `W_in` - size of prev layer
+
+    `((W_in - F + 2P) / S) + 1`
+
+* flattening
+
+  to make all parameters can be seen (as a vector) by a linear classification layer
 
 #### Feature Vector
+* a representation that encodes only the content of the image
+* often called a feature level representation of an image
+
+<p align="center">
+  <img src="./images/lesson-5/feature-vector.PNG" width="50%">
+</p>
 
 #### CIFAR Classification Example
-
-#### Notebook: CNN Classification
-
-#### CNNs in PyTorch
+* CIFAR-10 (Canadian Institute For Advanced Research) is a popular dataset of 60,000 tiny images
 
 #### Image Augmentation
+* data augmentation
 
-#### Augmentation Using Transformations
+  Artificially boosting the range and number of training examples by transforming existing examples to create additional examples. For example, suppose images are one of your features, but your data set doesn't contain enough image examples for the model to learn useful associations. Ideally, you'd add enough labeled images to your data set to enable your model to train properly. If that's not possible, data augmentation can rotate, stretch, and reflect each image to produce many variants of the original picture, possibly yielding enough labeled data to enable excellent training.
+
+<p align="center">
+  <img src="./images/lesson-5/image-augmentation.PNG" width="50%">
+</p>
+
+* translational invariance
+ 
+  In an image classification problem, an algorithm's ability to successfully classify images even when the position of objects within the image changes. For example, the algorithm can still identify a dog, whether it is in the center of the frame or at the left end of the frame.
+
+* size invariance
+ 
+  In an image classification problem, an algorithm's ability to successfully classify images even when the size of the image changes. For example, the algorithm can still identify a cat whether it consumes 2M pixels or 200K pixels. Note that even the best image classification algorithms still have practical limits on size invariance. For example, an algorithm (or human) is unlikely to correctly classify a cat image consuming only 20 pixels.
+
+* rotational invariance
+
+  In an image classification problem, an algorithm's ability to successfully classify images even when the orientation of the image changes. For example, the algorithm can still identify a tennis racket whether it is pointing up, sideways, or down. Note that rotational invariance is not always desirable; for example, an upside-down 9 should not be classified as a 9.
 
 #### Groundbreaking CNN Architectures
+* Since 2010, ImageNet project has held the ImageNet Large Scale Visual Recognition Competition, annual competition for the best CNN for object recognition and classification
+* First breakthrough was in 2012, the network called AlexNet was developed by a team at the University of Toronto, they pioneered the use of the ReLU activation function and dropout as a technicque for avoiding overfitting
+
+<p align="center">
+  <img src="./images/lesson-5/alexnet.PNG" width="50%">
+</p>
+
+* 2014 winner was VGGNet often reffered to as just VGG (Visual Geometry Group) at Oxford University, has two version VGG 16 and VGG 19
+
+<p align="center">
+  <img src="./images/lesson-5/vgg.PNG" width="50%">
+</p>
+
+
+* 2015 winner was Microsoft Research called ResNet, like VGG, largest groundbreaking has 152 layers, can solve vanishing gradient problem, achieves superhuman performances in classifying images in ImageNet database
+
+<p align="center">
+  <img src="./images/lesson-5/resnet.PNG" width="50%">
+</p>
 
 #### Visualizing CNNs (Part 1)
+* visualizing the activation maps and convolutional layers
+* taking filter from convolutional layers and constructing images that maximize their activations, google researchers get creative with this and designed technique called deep dreams
+  * say we have picture of tree, investigate filter for detecting a building, end up creating image that looks like some sort of tree or building hybrid
+
+<p align="center">
+  <img src="./images/lesson-5/viz-cnn-1.PNG" width="50%">
+</p>
 
 #### Visualizing CNNs (Part 2)
+* based on [paper](https://arxiv.org/pdf/1311.2901) by Zeiler and Fergus, visualization using [this toolbox](https://www.youtube.com/watch?v=ghEmQSxT6tw).
+  * Layer 1 - pick out very simple shapes and patterns like lines and blobs
+  * Layer 2 - circle, stripes and rectangle
+  * Layer 3 - complex combinations of features from the second layer
+  * Layer 4 - continue progression
+  * Layer 5 - classification
+
+<p align="center">
+  <img src="./images/lesson-5/viz-cnn-2a.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/viz-cnn-2b.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-5/viz-cnn-2c.PNG" width="50%">
+</p>
 
 #### Summary of CNNs
+* take input image then puts image through several convolutional and pooling layers
+* result is a set of feature maps reduced in size from the original image
+* flatten these maps, creating feature vector that can be passed to series of fully connected linear layer to produce probability distribution of class course
+* from thes predicted class label can be extracted
+* CNN not restricted to the image calssification task, can be applied to any task with a fixed number of outputs such as regression tasks that look at points on a face or detect human poses
 
 ### Quizes
 #### Q1 - 5.5: How Computers Interpret Images
@@ -951,12 +1128,49 @@ The following animation shows a convolutional layer consisting of 9 convolutiona
 * A: `d`
 * E: This kernel finds the difference between the top and bottom edges surrounding a given pixel.
 
+#### Q4 - 5.32: CNN's for Image Classification
+* Q: How might you define a Maxpooling layer, such that it down-samples an input by a factor of 4? 
+* A: `nn.MaxPool2d(2,4)`, `nn.MaxPool2d(4,4)`
+* E: The best choice would be to use a kernel and stride of 4, so that the maxpooling function sees every input pixel once, but any layer with a stride of 4 will down-sample an input by that factor.
+
+#### Q5 - 5.33: Convolutional Layers in PyTorch
+
+or the following quiz questions, consider an input image that is 130x130 (x, y) and 3 in depth (RGB). Say, this image goes through the following layers in order:
+
+```
+nn.Conv2d(3, 10, 3)
+nn.MaxPool2d(4, 4)
+nn.Conv2d(10, 20, 5, padding=2)
+nn.MaxPool2d(2, 2)
+```
+
+* Q: After going through all four of these layers in sequence, what is the depth of the final output?
+* A: `20`
+* E: the final depth is determined by the last convolutional layer, which has a `depth` = `out_channels` = 20.
+
+* Q: What is the x-y size of the output of the final maxpooling layer? Careful to look at how the 130x130 image passes through (and shrinks) as it moved through each convolutional and pooling layer.
+* A: 16
+* E: The 130x130 image shrinks by one after the first convolutional layer, then is down-sampled by 4 then 2 after each successive maxpooling layer!
+  `((W_in - F + 2P) / S) + 1`
+  
+  ((130 - 3 + 2*0) / 1) + 1 = 128
+  128 / 4 = 32
+  ((32 - 5 + 2*2) / 1) + 1 = 32
+  32 / 2 = 16
+
+* Q: How many parameters, total, will be left after an image passes through all four of the above layers in sequence?
+* A: `16*16*20`
+* E: It's the x-y size of the final output times the number of final channels/depth = `16*16 * 20`.
+
+
 ### Notebooks
 * [Multi-Layer Perceptron, MNIST](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/mnist-mlp/mnist_mlp_exercise.ipynb)
 * [Multi-Layer Perceptron, MNIST (With Validation)](https://colab.research.google.com/drive/1u4FmtGa24clNIp3sdltqRxyaEHEi-fGe)
 * [Creating a Filter, Edge Detection](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/conv-visualization/custom_filters.ipynb)
 * [Convolutional Layer](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/conv-visualization/conv_visualization.ipynb)
 * [Maxpooling Layer](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/conv-visualization/maxpooling_visualization.ipynb)
+* [Convolutional Neural Networks](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/cifar-cnn/cifar10_cnn_exercise.ipynb)
+* [Convolutional Neural Networks - Image Augmentation](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/cifar-cnn/cifar10_cnn_augmentation.ipynb)
 
 ## Lesson 6
 
