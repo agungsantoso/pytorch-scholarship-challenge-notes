@@ -116,7 +116,21 @@ Contributions are always welcome!
     + [Q4 - 5.32: CNN's for Image Classification](#q4---532-cnns-for-image-classification)
     + [Q5 - 5.33: Convolutional Layers in PyTorch](#q5---533-convolutional-layers-in-pytorch)
   * [Notebooks](#notebooks-2)
-- [Lesson 6](#lesson-6)
+- [Lesson 6: Style Transfer](#lesson-6-style-transfer)
+  * [Lectures](#lectures-3)
+    + [Style Transfer](#style-transfer)
+    + [Separating Style & Content](#separating-style--content)
+    + [VGG19 & Content Loss](#vgg19--content-loss)
+    + [Gram Matrix](#gram-matrix)
+    + [Style Loss](#style-loss)
+    + [Loss Weights](#loss-weights)
+    + [VGG Features](#vgg-features)
+    + [Features & Gram Matrix](#features--gram-matrix)
+    + [Gram Matrix Solution](#gram-matrix-solution)
+    + [Defining the Loss](#defining-the-loss)
+    + [Total Loss & Complete Solution](#total-loss--complete-solution)
+  * [Quizes](#quizes-2)
+  * [Notebooks](#notebooks-3)
 - [Lesson 7](#lesson-7)
 - [Lesson 8](#lesson-8)
 - [Lesson 9](#lesson-9)
@@ -1176,8 +1190,51 @@ nn.MaxPool2d(2, 2)
 * [Convolutional Neural Networks](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/cifar-cnn/cifar10_cnn_exercise.ipynb)
 * [Convolutional Neural Networks - Image Augmentation](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/convolutional-neural-networks/cifar-cnn/cifar10_cnn_augmentation.ipynb)
 
-## Lesson 6
+## Lesson 6: Style Transfer
+### Lectures
 
+#### Style Transfer
+* apply the style of one image to another image
+
+<p align="center">
+  <img src="./images/lesson-6/style-transfer.PNG" width="50%">
+</p>
+
+#### Separating Style & Content
+* feature space designed to capture texture and color information used, essentially looks at spatial correlations within a layer of a network
+* correlation is a measure of the relationship between two or more variables
+
+<p align="center">
+  <img src="./images/lesson-6/separate-sytle-content.PNG" width="50%">
+</p>
+
+* similarities and differences between features in a layer should give some information about texture and color information found in an image, but at the same time leave out information about the actual arrangement and identitity of different objects in that image
+
+<p align="center">
+  <img src="./images/lesson-6/style-representation.PNG" width="50%">
+</p>
+
+#### VGG19 & Content Loss
+
+#### Gram Matrix
+
+#### Style Loss
+
+#### Loss Weights
+
+#### VGG Features
+
+#### Features & Gram Matrix
+
+#### Gram Matrix Solution
+
+#### Defining the Loss
+
+#### Total Loss & Complete Solution
+
+### Quizes
+
+### Notebooks
 
 ## Lesson 7
 
