@@ -130,6 +130,9 @@ Contributions are always welcome!
     + [Defining the Loss](#defining-the-loss)
     + [Total Loss & Complete Solution](#total-loss--complete-solution)
   * [Quizes](#quizes-2)
+    + [Q1 - 6.4: Gram Matrix](#q1---64-gram-matrix)
+      - [Q 1.1](#q-11)
+      - [Q 1.2](#q-12)
   * [Notebooks](#notebooks-3)
 - [Lesson 7](#lesson-7)
 - [Lesson 8](#lesson-8)
@@ -1215,8 +1218,49 @@ nn.MaxPool2d(2, 2)
 </p>
 
 #### VGG19 & Content Loss
+* VGG19 -> 19 layer VGG network
+
+<p align="center">
+  <img src="./images/lesson-6/vgg-19.PNG" width="50%">
+</p>
+
+* When the network sees the __content image__, it will go through feed-forward process until it gets to a conv layer that is deep in the network, the output will be the content representation
+
+<p align="center">
+  <img src="./images/lesson-6/content-rep.PNG" width="50%">
+</p>
+
+* When it sees tye __style image__, it will extract different features from multiple layers that represent the style of that image
+
+<p align="center">
+  <img src="./images/lesson-6/style-rep.PNG" width="50%">
+</p>
+
+* __content loss__ is a loss that calculates the difference between the content (Cc) and target (Tc) image representation
+
+<p align="center">
+  <img src="./images/lesson-6/content-loss.PNG" width="50%">
+</p>
 
 #### Gram Matrix
+* Correlations at each layer in convolutional layer are given by a Gram matrix
+* First step in calculating the Gram matrix, will be to vectorize the values of feature map
+
+<p align="center">
+  <img src="./images/lesson-6/flatten.PNG" width="50%">
+</p>
+
+* By flattening the XY dimensions of the feature maps, we're convrting a 3D conv layer to a 2D matrix of values
+
+<p align="center">
+  <img src="./images/lesson-6/vectorized-feature-map.PNG" width="50%">
+</p>
+
+* The next step is to multiply vectorized feature map by its transpose to get the gram matrix
+
+<p align="center">
+  <img src="./images/lesson-6/gram-matrix.PNG" width="50%">
+</p>
 
 #### Style Loss
 
@@ -1233,6 +1277,16 @@ nn.MaxPool2d(2, 2)
 #### Total Loss & Complete Solution
 
 ### Quizes
+#### Q1 - 6.4: Gram Matrix
+##### Q 1.1
+* Q: Given a convolutional layer with dimensions `d x h x w = (20*8*8)`, what length will one row of the vectorized convolutional layer have? (Vectorized means that the spatial dimensions are flattened.)
+* A: `64`
+* E: When the height and width (8 x 8) are flattened, the resultant 2D matrix will have as many columns as the height and width, multiplied: `8*8 = 64`.
+
+##### Q 1.2
+* Q: Given a convolutional layer with dimensions `d x h x w = (20*8*8)`, what dimensions (h x w) will the resultant Gram matrix have?
+* A: `(20 x 20)`
+* E: he Gram matrix will be a square matrix, with a width and height = to the depth of the convolutional layer in question.
 
 ### Notebooks
 
