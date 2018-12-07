@@ -1264,7 +1264,31 @@ nn.MaxPool2d(2, 2)
 
 #### Style Loss
 
+* __content loss__ is a loss that calculates the difference between the image style (Ss) and target (Ts) image style, `a` is constant that accounts for the number of values in each layer, `w` is style weights
+
+<p align="center">
+  <img src="./images/lesson-6/style-loss.PNG" width="50%">
+</p>
+
+* Add together content loss and style loss to get total loss and then use typical back propagation and optimization to reduce total loss
+
+<p align="center">
+  <img src="./images/lesson-6/total-loss.PNG" width="50%">
+</p>
+
 #### Loss Weights
+
+* alpha beta ratio is ratio between alpha (content weight) and beta (style weight)
+
+<p align="center">
+  <img src="./images/lesson-6/weight-ratio.PNG" width="50%">
+</p>
+
+* Different alpha beta ratio can result in different generated image
+
+<p align="center">
+  <img src="./images/lesson-6/weight-ratio-effect.PNG" width="50%">
+</p>
 
 #### VGG Features
 
@@ -1286,7 +1310,7 @@ nn.MaxPool2d(2, 2)
 ##### Q 1.2
 * Q: Given a convolutional layer with dimensions `d x h x w = (20*8*8)`, what dimensions (h x w) will the resultant Gram matrix have?
 * A: `(20 x 20)`
-* E: he Gram matrix will be a square matrix, with a width and height = to the depth of the convolutional layer in question.
+* E: The Gram matrix will be a square matrix, with a width and height = to the depth of the convolutional layer in question.
 
 ### Notebooks
 
