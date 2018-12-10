@@ -124,11 +124,6 @@ Contributions are always welcome!
     + [Gram Matrix](#gram-matrix)
     + [Style Loss](#style-loss)
     + [Loss Weights](#loss-weights)
-    + [VGG Features](#vgg-features)
-    + [Features & Gram Matrix](#features--gram-matrix)
-    + [Gram Matrix Solution](#gram-matrix-solution)
-    + [Defining the Loss](#defining-the-loss)
-    + [Total Loss & Complete Solution](#total-loss--complete-solution)
   * [Quizes](#quizes-2)
     + [Q1 - 6.4: Gram Matrix](#q1---64-gram-matrix)
       - [Q 1.1](#q-11)
@@ -1290,16 +1285,6 @@ nn.MaxPool2d(2, 2)
   <img src="./images/lesson-6/weight-ratio-effect.PNG" width="50%">
 </p>
 
-#### VGG Features
-
-#### Features & Gram Matrix
-
-#### Gram Matrix Solution
-
-#### Defining the Loss
-
-#### Total Loss & Complete Solution
-
 ### Quizes
 #### Q1 - 6.4: Gram Matrix
 ##### Q 1.1
@@ -1313,6 +1298,8 @@ nn.MaxPool2d(2, 2)
 * E: The Gram matrix will be a square matrix, with a width and height = to the depth of the convolutional layer in question.
 
 ### Notebooks
+* [Style Transfer with Deep Neural Networks](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/style-transfer/Style_Transfer_Exercise.ipynb)
+
 
 ## Lesson 7
 
