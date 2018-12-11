@@ -130,6 +130,30 @@ Contributions are always welcome!
       - [Q 1.2](#q-12)
   * [Notebooks](#notebooks-3)
 - [Lesson 7](#lesson-7)
+  * [Lectures](#lectures-4)
+    + [Intro to RNNs](#intro-to-rnns)
+    + [RNN vs LSTM](#rnn-vs-lstm)
+    + [Basics of LSTM](#basics-of-lstm)
+    + [Architecture of LSTM](#architecture-of-lstm)
+    + [The Learn Gate](#the-learn-gate)
+    + [The Forget Gate](#the-forget-gate)
+    + [The Remember Gate](#the-remember-gate)
+    + [The Use Gate](#the-use-gate)
+    + [Putting it All Together](#putting-it-all-together)
+    + [Other architectures](#other-architectures)
+    + [Implementing RNNs](#implementing-rnns)
+    + [Time-Series Prediction](#time-series-prediction)
+    + [Training & Memory](#training--memory)
+    + [Character-wise RNNs](#character-wise-rnns)
+    + [Sequence Batching](#sequence-batching)
+    + [Notebook: Character-Level RNN](#notebook-character-level-rnn)
+    + [Implementing a Char-RNN](#implementing-a-char-rnn)
+    + [Batching Data, Solution](#batching-data-solution)
+    + [Defining the Model](#defining-the-model)
+    + [Char-RNN, Solution](#char-rnn-solution)
+    + [Making Predictions](#making-predictions)
+  * [Quizes](#quizes-3)
+  * [Notebooks](#notebooks-4)
 - [Lesson 8](#lesson-8)
 - [Lesson 9](#lesson-9)
 - [Challenge Project](#challenge-project)
@@ -1302,6 +1326,102 @@ nn.MaxPool2d(2, 2)
 
 
 ## Lesson 7
+
+### Lectures
+#### Intro to RNNs
+* RNN (__R__ ecurrent __N__ eural __N__ etworks)
+
+  A neural network that is intentionally run multiple times, where parts of each run feed into the next run. Specifically, hidden layers from the previous run provide part of the input to the same hidden layer in the next run. Recurrent neural networks are particularly useful for evaluating sequences, so that the hidden layers can learn from previous runs of the neural network on earlier parts of the sequence.
+
+  For example, the following figure shows a recurrent neural network that runs four times. Notice that the values learned in the hidden layers from the first run become part of the input to the same hidden layers in the second run. Similarly, the values learned in the hidden layer on the second run become part of the input to the same hidden layer in the third run. In this way, the recurrent neural network gradually trains and predicts the meaning of the entire sequence rather than just the meaning of individual words.
+
+  <p align="center">
+    <img src="./images/lesson-7/rnn.SVG" width="75%">
+  </p>
+
+* LSTM (__L__ ong __S__ hort - __T__ erm __M__ emory)
+
+  LSTM are an improvement of the RNN, and quite useful when needs to switch between remembering recent things, and things from long time ago
+
+#### RNN vs LSTM
+* RNN work as follows:
+  * memory comes in an merges with a current event
+  * and the output comes out as a prediction of what the input is
+  * as part of the input for the next iteration of the neural network
+* RNN has problem with the memory that is short term memory
+
+<p align="center">
+  <img src="./images/lesson-7/rnn.PNG" width="50%">
+</p>
+
+* LSTM works as follows:
+  * keeps track long term memory which comes in an comes out
+  * and short term memory which also comes in and comes out
+* From there, we get a new long term memory, short term memory and a prediction. In here, we protect old information more.
+
+<p align="center">
+  <img src="./images/lesson-7/lstm.PNG" width="50%">
+</p>
+
+#### Basics of LSTM
+* Architecture of LSTM
+  * forget gate
+    long term memory (__LTM__) goes here where it forgets everything that it doesn't consider useful
+  * learn gate
+    short term memory and event are joined together containing information that have recently learned and it removes any unecessary information
+  * remember gate
+    long term memory that haven't forgotten yet plus the new information that have learned get joined together to update long term memmory
+  * use gate
+    decide what information use from what previously know plus what we just learned to make a prediction. The output becomes both the prediction and the new short term memory (__STM__)
+
+  <p align="center">
+    <img src="./images/lesson-7/lstm-arch.PNG" width="50%">
+  </p>
+
+  <p align="center">
+    <img src="./images/lesson-7/lstm-arch-2.PNG" width="50%">
+  </p>
+
+
+#### Architecture of LSTM
+
+#### The Learn Gate
+
+#### The Forget Gate
+
+#### The Remember Gate
+
+#### The Use Gate
+
+#### Putting it All Together
+
+#### Other architectures
+
+#### Implementing RNNs
+
+#### Time-Series Prediction
+
+#### Training & Memory
+
+#### Character-wise RNNs
+
+#### Sequence Batching
+
+#### Notebook: Character-Level RNN
+
+#### Implementing a Char-RNN
+
+#### Batching Data, Solution
+
+#### Defining the Model
+
+#### Char-RNN, Solution
+
+#### Making Predictions
+
+### Quizes
+
+### Notebooks
 
 
 ## Lesson 8
