@@ -1325,7 +1325,7 @@ nn.MaxPool2d(2, 2)
 * [Style Transfer with Deep Neural Networks](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/style-transfer/Style_Transfer_Exercise.ipynb)
 
 
-## Lesson 7
+## Lesson 7: Recurrent Neural Networks
 
 ### Lectures
 #### Intro to RNNs
@@ -1336,7 +1336,7 @@ nn.MaxPool2d(2, 2)
   For example, the following figure shows a recurrent neural network that runs four times. Notice that the values learned in the hidden layers from the first run become part of the input to the same hidden layers in the second run. Similarly, the values learned in the hidden layer on the second run become part of the input to the same hidden layer in the third run. In this way, the recurrent neural network gradually trains and predicts the meaning of the entire sequence rather than just the meaning of individual words.
 
   <p align="center">
-    <img src="./images/lesson-7/rnn.SVG" width="75%">
+    <img src="./images/lesson-7/rnn.svg" width="75%">
   </p>
 
 * LSTM (__L__ ong __S__ hort - __T__ erm __M__ emory)
@@ -1366,12 +1366,16 @@ nn.MaxPool2d(2, 2)
 #### Basics of LSTM
 * Architecture of LSTM
   * forget gate
+
     long term memory (__LTM__) goes here where it forgets everything that it doesn't consider useful
   * learn gate
+
     short term memory and event are joined together containing information that have recently learned and it removes any unecessary information
   * remember gate
+
     long term memory that haven't forgotten yet plus the new information that have learned get joined together to update long term memmory
   * use gate
+  
     decide what information use from what previously know plus what we just learned to make a prediction. The output becomes both the prediction and the new short term memory (__STM__)
 
   <p align="center">
