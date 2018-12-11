@@ -1382,7 +1382,6 @@ nn.MaxPool2d(2, 2)
     <img src="./images/lesson-7/lstm-arch-2.PNG" width="50%">
   </p>
 
-
 #### Architecture of LSTM
 
 #### The Learn Gate
