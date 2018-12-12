@@ -1387,10 +1387,52 @@ nn.MaxPool2d(2, 2)
   </p>
 
 #### Architecture of LSTM
+* RNN Architecture
+
+<p align="center">
+  <img src="./images/lesson-7/rnn-math.PNG" width="50%">
+</p>
+
+* LSTM Architecture
+
+<p align="center">
+  <img src="./images/lesson-7/lstm-math.PNG" width="50%">
+</p>
 
 #### The Learn Gate
 
+* Learn gate works as follows:
+  * Take __STM__ and the __event__ and jonis it (use __tanh__ activation function)
+  * then ignore (ignore factor) a bit to keep the important part of it (use __sigmoid__ activation function)
+
+<p align="center">
+  <img src="./images/lesson-7/learn-gate.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/learn-gate-math.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/learn-eq.png" width="50%">
+</p>
+
 #### The Forget Gate
+
+* Forget gate works as follows:
+  * Take __LTM__ and decides what parts to keep and to forget (forget factor, use __sigmoid__ activation function)
+
+<p align="center">
+  <img src="./images/lesson-7/forget-gate.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/forget-gate-math.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/forget-eq.png" width="50%">
+</p>
 
 #### The Remember Gate
 
@@ -1428,7 +1470,6 @@ nn.MaxPool2d(2, 2)
 
 
 ## Lesson 8
-
 
 ## Lesson 9
 
