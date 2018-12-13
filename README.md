@@ -129,7 +129,7 @@ Contributions are always welcome!
       - [Q 1.1](#q-11)
       - [Q 1.2](#q-12)
   * [Notebooks](#notebooks-3)
-- [Lesson 7](#lesson-7)
+- [Lesson 7: Recurrent Neural Networks](#lesson-7-recurrent-neural-networks)
   * [Lectures](#lectures-4)
     + [Intro to RNNs](#intro-to-rnns)
     + [RNN vs LSTM](#rnn-vs-lstm)
@@ -1436,9 +1436,47 @@ nn.MaxPool2d(2, 2)
 
 #### The Remember Gate
 
+* Remember gate works as follows:
+  * Take LTM coming out of forget gate and STM coming out of learn gate and combine them together
+
+<p align="center">
+  <img src="./images/lesson-7/remember-gate.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/remember-gate-math.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/remember-gate-eq.PNG" width="50%">
+</p>
+
 #### The Use Gate
 
+* Remember gate works as follows:
+  * Take LTM coming out of forget gate (apply __tanh__) and STM coming out of learn gate (apply __sigmoid__) to come up with a new STM and an output (multiply them together)
+
+<p align="center">
+  <img src="./images/lesson-7/use-gate.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/use-gate-math.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/use-gate-eq.png" width="50%">
+</p>
+
 #### Putting it All Together
+
+<p align="center">
+  <img src="./images/lesson-7/lstm-full.PNG" width="50%">
+</p>
+
+<p align="center">
+  <img src="./images/lesson-7/lstm-full-math.png" width="50%">
+</p>
 
 #### Other architectures
 
