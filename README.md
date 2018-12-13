@@ -1465,7 +1465,7 @@ nn.MaxPool2d(2, 2)
 </p>
 
 <p align="center">
-  <img src="./images/lesson-7/use-gate-eq.png" width="50%">
+  <img src="./images/lesson-7/use-gate-eq.PNG" width="50%">
 </p>
 
 #### Putting it All Together
@@ -1475,7 +1475,7 @@ nn.MaxPool2d(2, 2)
 </p>
 
 <p align="center">
-  <img src="./images/lesson-7/lstm-full-math.png" width="50%">
+  <img src="./images/lesson-7/lstm-full-math.PNG" width="50%">
 </p>
 
 #### Other architectures
