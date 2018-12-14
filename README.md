@@ -141,8 +141,6 @@ Contributions are always welcome!
     + [The Use Gate](#the-use-gate)
     + [Putting it All Together](#putting-it-all-together)
     + [Other architectures](#other-architectures)
-    + [Implementing RNNs](#implementing-rnns)
-    + [Time-Series Prediction](#time-series-prediction)
     + [Training & Memory](#training--memory)
     + [Character-wise RNNs](#character-wise-rnns)
     + [Sequence Batching](#sequence-batching)
