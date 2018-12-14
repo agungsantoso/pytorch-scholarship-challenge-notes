@@ -1479,10 +1479,28 @@ nn.MaxPool2d(2, 2)
 </p>
 
 #### Other architectures
+* GRU (__G__ ated __R__ ecurrent __U__ nit) 
+  * combine forget and learn gate into an __update gate__
+  * run this through a combine gate
+  * only returns one working memory
 
-#### Implementing RNNs
+<p align="center">
+  <img src="./images/lesson-7/gru.PNG" width="50%">
+</p>
 
-#### Time-Series Prediction
+* Peephole Connections
+  * forget gate which also connect LTM into neural network that calculates forget factor
+
+<p align="center">
+  <img src="./images/lesson-7/peephole-conn.PNG" width="50%">
+</p>
+
+* LSTM with Peephole Connection
+  * do peephole connection for every one of forget-type nodes
+
+<p align="center">
+  <img src="./images/lesson-7/lstm-with-peephole.PNG" width="50%">
+</p>
 
 #### Training & Memory
 
@@ -1505,7 +1523,7 @@ nn.MaxPool2d(2, 2)
 ### Quizes
 
 ### Notebooks
-
+* [Simple RNN - Time Series Prediction](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/recurrent-neural-networks/time-series/Simple_RNN.ipynb)
 
 ## Lesson 8
 
