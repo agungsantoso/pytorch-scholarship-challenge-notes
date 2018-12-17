@@ -1512,7 +1512,7 @@ nn.MaxPool2d(2, 2)
   * sequence of numbers from 1 to 12
   * split it in half and pass in two sequences
   * batch size corresponds to the number of sequences we're using, here we'd say the batch size is 2
-  * we can retain hidden state from one batch and use it at hte start of the next batch
+  * we can retain hidden state from one batch and use it at the start of the next batch
 
 <p align="center">
   <img src="./images/lesson-7/sequence-batching.PNG" width="50%">
