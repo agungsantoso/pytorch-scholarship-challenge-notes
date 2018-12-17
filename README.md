@@ -141,16 +141,10 @@ Contributions are always welcome!
     + [The Use Gate](#the-use-gate)
     + [Putting it All Together](#putting-it-all-together)
     + [Other architectures](#other-architectures)
-    + [Training & Memory](#training--memory)
     + [Character-wise RNNs](#character-wise-rnns)
     + [Sequence Batching](#sequence-batching)
-    + [Notebook: Character-Level RNN](#notebook-character-level-rnn)
-    + [Implementing a Char-RNN](#implementing-a-char-rnn)
-    + [Batching Data, Solution](#batching-data-solution)
-    + [Defining the Model](#defining-the-model)
-    + [Char-RNN, Solution](#char-rnn-solution)
-    + [Making Predictions](#making-predictions)
   * [Quizes](#quizes-3)
+    + [Q1 - Training & Memory](#q1---training--memory)
   * [Notebooks](#notebooks-4)
 - [Lesson 8](#lesson-8)
 - [Lesson 9](#lesson-9)
@@ -1500,28 +1494,39 @@ nn.MaxPool2d(2, 2)
   <img src="./images/lesson-7/lstm-with-peephole.PNG" width="50%">
 </p>
 
-#### Training & Memory
-
 #### Character-wise RNNs
+* Network will learn about some text, one character at a time and then generate new text one character at a time
+* The architecture is as follows:
+  * input layer will pass the characters as one hot encoded vectors
+  * these vectors go to the hidden layer which built with LSTM cells
+  * the output layer is used to predict to the next character (using softmax activation)
+  * use cross entropy loss for training with gradient descent
+
+<p align="center">
+  <img src="./images/lesson-7/character-wise.PNG" width="50%">
+</p>
 
 #### Sequence Batching
+* Use matrix operations to make training mor efficient
+* RNN training multiple sequence in parallel, for example:
+  * sequence of numbers from 1 to 12
+  * split it in half and pass in two sequences
+  * batch size corresponds to the number of sequences we're using, here we'd say the batch size is 2
+  * we can retain hidden state from one batch and use it at hte start of the next batch
 
-#### Notebook: Character-Level RNN
-
-#### Implementing a Char-RNN
-
-#### Batching Data, Solution
-
-#### Defining the Model
-
-#### Char-RNN, Solution
-
-#### Making Predictions
+<p align="center">
+  <img src="./images/lesson-7/sequence-batching.PNG" width="50%">
+</p> 
 
 ### Quizes
+#### Q1 - Training & Memory
+* Q: Say you've defined a GRU layer with `input_size = 100`, `hidden_size = 20`, and `num_layers=1`. What will the dimensions of the hidden state be if you're passing in data, batch first, in batches of 3 sequences at a time?
+* A: `(1, 3, 20)`
+* E: The hidden state should have dimensions: `(num_layers, batch_size, hidden_dim)`.
 
 ### Notebooks
 * [Simple RNN - Time Series Prediction](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/recurrent-neural-networks/time-series/Simple_RNN.ipynb)
+* [Character-Level LSTM in PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/recurrent-neural-networks/char-rnn/Character_Level_RNN_Exercise.ipynb)
 
 ## Lesson 8
 
