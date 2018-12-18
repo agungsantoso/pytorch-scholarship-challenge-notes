@@ -1528,7 +1528,13 @@ nn.MaxPool2d(2, 2)
 * [Simple RNN - Time Series Prediction](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/recurrent-neural-networks/time-series/Simple_RNN.ipynb)
 * [Character-Level LSTM in PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/recurrent-neural-networks/char-rnn/Character_Level_RNN_Exercise.ipynb)
 
-## Lesson 8
+## Lesson 8: Sentiment Prediction with RNNs
+### Lectures
+
+### Quizes
+
+### Noteboosk
+* [Sentiment ANalysis with an RNN](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/sentiment-rnn/Sentiment_RNN_Exercise.ipynb)
 
 ## Lesson 9
 
