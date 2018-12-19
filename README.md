@@ -147,10 +147,8 @@ Contributions are always welcome!
     + [Q1 - Training & Memory](#q1---training--memory)
   * [Notebooks](#notebooks-4)
 - [Lesson 8: Sentiment Prediction with RNNs](#lesson-8-sentiment-prediction-with-rnns)
-  * [Lectures](#lectures-5)
-  * [Quizes](#quizes-4)
   * [Noteboosk](#noteboosk)
-- [Lesson 9](#lesson-9)
+- [Lesson 9: Deploying PyTorch Models](#lesson-9-deploying-pytorch-models)
 - [Challenge Project](#challenge-project)
 - [Credits](#credits)
 
@@ -1532,14 +1530,10 @@ nn.MaxPool2d(2, 2)
 * [Character-Level LSTM in PyTorch](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/recurrent-neural-networks/char-rnn/Character_Level_RNN_Exercise.ipynb)
 
 ## Lesson 8: Sentiment Prediction with RNNs
-### Lectures
-
-### Quizes
-
 ### Noteboosk
 * [Sentiment ANalysis with an RNN](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/sentiment-rnn/Sentiment_RNN_Exercise.ipynb)
 
-## Lesson 9
+## Lesson 9: Deploying PyTorch Models
 
 ## Challenge Project
 
