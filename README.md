@@ -1538,7 +1538,7 @@ nn.MaxPool2d(2, 2)
 
 ## Lesson 8: Sentiment Prediction with RNNs
 ### Notebook
-* [Sentiment ANalysis with an RNN](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/sentiment-rnn/Sentiment_RNN_Exercise.ipynb)
+* [Sentiment Analysis with an RNN](https://github.com/agungsantoso/deep-learning-v2-pytorch/blob/master/sentiment-rnn/Sentiment_RNN_Exercise.ipynb)
 
 ## Lesson 9: Deploying PyTorch Models
 ### Lectures
