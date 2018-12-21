@@ -1594,6 +1594,10 @@ nn.MaxPool2d(2, 2)
   * from there we can use the C++ API to load it into a C++ application
 
 ## Challenge Project
+* [Mhendri's Tips, Model Performance, Submission Troubleshooting](https://docs.google.com/document/d/1-MCDPOejsn2hq9EoBzMpzGv9jEdtMWoIwjkAa1cVbSM/edit?usp=sharing)
+* [Gabriele Picco's Deep Learning Flower Indentifier](https://github.com/GabrielePicco/deep-learning-flower-identifier)
+* [102 Category Flower Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
+* [Jose Nieto's Implementing an Image Classifier with PyTorch](https://medium.com/udacity/implementing-an-image-classifier-with-pytorch-part-1-cf5444b8e9c9)
 
 ## Credits
 1. Images taken from lectures videos at [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
