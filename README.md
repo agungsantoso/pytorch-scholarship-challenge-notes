@@ -1597,7 +1597,12 @@ nn.MaxPool2d(2, 2)
 * [Mhendri's Tips, Model Performance, Submission Troubleshooting](https://docs.google.com/document/d/1-MCDPOejsn2hq9EoBzMpzGv9jEdtMWoIwjkAa1cVbSM/edit?usp=sharing)
 * [Gabriele Picco's Deep Learning Flower Indentifier](https://github.com/GabrielePicco/deep-learning-flower-identifier)
 * [102 Category Flower Dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
-* [Jose Nieto's Implementing an Image Classifier with PyTorch](https://medium.com/udacity/implementing-an-image-classifier-with-pytorch-part-1-cf5444b8e9c9)
+* Jose Nieto's Implementing an Image Classifier with PyTorch 
+  * [Part 1](https://medium.com/udacity/implementing-an-image-classifier-with-pytorch-part-1-cf5444b8e9c9)
+  * [Part 2](https://medium.com/p/ae4dd7b2f48?source=user_profile---------3------------------)
+  * [Part 3](https://medium.com/p/6ff66106ba89?source=user_profile---------2------------------)
+* [How to move our model from Google Colab to Udacity’s Workspace](https://medium.com/@ml_kid/how-to-move-our-model-from-google-colab-to-udacitys-workspace-final-lab-project-88e1a0b7d6ab)
+* [Tips and tricks for a successful Udacity project checkpoint load](https://medium.com/@annebonner/load-that-checkpoint-tips-and-tricks-for-a-successful-udacity-project-checkpoint-load-dd12bea7c505)
 
 ## Credits
 1. Images taken from lectures videos at [Intro to Deep Learning with PyTorch](https://www.udacity.com/course/deep-learning-pytorch--ud188)
