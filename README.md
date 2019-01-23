@@ -1,4 +1,4 @@
-# PyTorch Scholarship Challenge 2018/2019 Phase 1 Notes
+# PyTorch Scholarship Challenge 2018/2019 [Phase 1] Notes
 
 
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
